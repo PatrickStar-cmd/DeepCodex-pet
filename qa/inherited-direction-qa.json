@@ -1,6 +1,8 @@
 {
   "ok": true,
   "gaze_rows_pixel_identical_to_previously_reviewed_atlas": true,
-  "prior_quality_report": "original-direction-quality.json",
-  "prior_blind_verdict_report": "blind-validation.json"
+  "evidence": "preserved-rows.json",
+  "prior_quality_report": "history/laptop-v1/pet-quality.json",
+  "prior_blind_verdict_report": "blind-validation.json",
+  "note": "Gaze pixels unchanged; labeled direction review and blind results inherited. Continuity rerun on current atlas."
 }

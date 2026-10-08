@@ -26,7 +26,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "original-local-artifact/00.png",
+          "file": "source/frames/idle/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13181,
@@ -41,7 +41,7 @@
         },
         {
           "index": 1,
-          "file": "original-local-artifact/01.png",
+          "file": "source/frames/idle/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12964,
@@ -56,7 +56,7 @@
         },
         {
           "index": 2,
-          "file": "original-local-artifact/02.png",
+          "file": "source/frames/idle/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12955,
@@ -71,7 +71,7 @@
         },
         {
           "index": 3,
-          "file": "original-local-artifact/03.png",
+          "file": "source/frames/idle/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12985,
@@ -86,7 +86,7 @@
         },
         {
           "index": 4,
-          "file": "original-local-artifact/04.png",
+          "file": "source/frames/idle/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13039,
@@ -101,7 +101,7 @@
         },
         {
           "index": 5,
-          "file": "original-local-artifact/05.png",
+          "file": "source/frames/idle/05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13052,
@@ -127,7 +127,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "original-local-artifact/00.png",
+          "file": "source/frames/running-right/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13467,
@@ -142,7 +142,7 @@
         },
         {
           "index": 1,
-          "file": "original-local-artifact/01.png",
+          "file": "source/frames/running-right/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12348,
@@ -157,7 +157,7 @@
         },
         {
           "index": 2,
-          "file": "original-local-artifact/02.png",
+          "file": "source/frames/running-right/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12353,
@@ -172,7 +172,7 @@
         },
         {
           "index": 3,
-          "file": "original-local-artifact/03.png",
+          "file": "source/frames/running-right/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12479,
@@ -187,7 +187,7 @@
         },
         {
           "index": 4,
-          "file": "original-local-artifact/04.png",
+          "file": "source/frames/running-right/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13504,
@@ -202,7 +202,7 @@
         },
         {
           "index": 5,
-          "file": "original-local-artifact/05.png",
+          "file": "source/frames/running-right/05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12401,
@@ -217,7 +217,7 @@
         },
         {
           "index": 6,
-          "file": "original-local-artifact/06.png",
+          "file": "source/frames/running-right/06.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12703,
@@ -232,7 +232,7 @@
         },
         {
           "index": 7,
-          "file": "original-local-artifact/07.png",
+          "file": "source/frames/running-right/07.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12518,
@@ -258,7 +258,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "original-local-artifact/00.png",
+          "file": "source/frames/running-left/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13343,
@@ -273,7 +273,7 @@
         },
         {
           "index": 1,
-          "file": "original-local-artifact/01.png",
+          "file": "source/frames/running-left/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12113,
@@ -288,7 +288,7 @@
         },
         {
           "index": 2,
-          "file": "original-local-artifact/02.png",
+          "file": "source/frames/running-left/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12313,
@@ -303,7 +303,7 @@
         },
         {
           "index": 3,
-          "file": "original-local-artifact/03.png",
+          "file": "source/frames/running-left/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12117,
@@ -318,7 +318,7 @@
         },
         {
           "index": 4,
-          "file": "original-local-artifact/04.png",
+          "file": "source/frames/running-left/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13325,
@@ -333,7 +333,7 @@
         },
         {
           "index": 5,
-          "file": "original-local-artifact/05.png",
+          "file": "source/frames/running-left/05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 11908,
@@ -348,7 +348,7 @@
         },
         {
           "index": 6,
-          "file": "original-local-artifact/06.png",
+          "file": "source/frames/running-left/06.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12596,
@@ -363,7 +363,7 @@
         },
         {
           "index": 7,
-          "file": "original-local-artifact/07.png",
+          "file": "source/frames/running-left/07.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12526,
@@ -389,14 +389,14 @@
       "frames": [
         {
           "index": 0,
-          "file": "original-local-artifact/00.png",
+          "file": "source/frames/waving/00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 15172,
+          "nontransparent_pixels": 13020,
           "bbox": [
-            24,
+            34,
             5,
-            167,
+            157,
             203
           ],
           "edge_pixels": 0,
@@ -404,14 +404,14 @@
         },
         {
           "index": 1,
-          "file": "original-local-artifact/01.png",
+          "file": "source/frames/waving/01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 15096,
+          "nontransparent_pixels": 13060,
           "bbox": [
-            24,
+            34,
             5,
-            167,
+            157,
             203
           ],
           "edge_pixels": 0,
@@ -419,14 +419,14 @@
         },
         {
           "index": 2,
-          "file": "original-local-artifact/02.png",
+          "file": "source/frames/waving/02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 15117,
+          "nontransparent_pixels": 13234,
           "bbox": [
-            24,
-            5,
-            167,
+            34,
+            6,
+            157,
             203
           ],
           "edge_pixels": 0,
@@ -434,14 +434,14 @@
         },
         {
           "index": 3,
-          "file": "original-local-artifact/03.png",
+          "file": "source/frames/waving/03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 15002,
+          "nontransparent_pixels": 12987,
           "bbox": [
-            24,
+            34,
             5,
-            167,
+            157,
             203
           ],
           "edge_pixels": 0,
@@ -460,7 +460,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "original-local-artifact/00.png",
+          "file": "source/frames/jumping/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10754,
@@ -475,7 +475,7 @@
         },
         {
           "index": 1,
-          "file": "original-local-artifact/01.png",
+          "file": "source/frames/jumping/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 11259,
@@ -490,7 +490,7 @@
         },
         {
           "index": 2,
-          "file": "original-local-artifact/02.png",
+          "file": "source/frames/jumping/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 11346,
@@ -505,7 +505,7 @@
         },
         {
           "index": 3,
-          "file": "original-local-artifact/03.png",
+          "file": "source/frames/jumping/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 11313,
@@ -520,7 +520,7 @@
         },
         {
           "index": 4,
-          "file": "original-local-artifact/04.png",
+          "file": "source/frames/jumping/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 10782,
@@ -546,7 +546,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "original-local-artifact/00.png",
+          "file": "source/frames/failed/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13130,
@@ -561,7 +561,7 @@
         },
         {
           "index": 1,
-          "file": "original-local-artifact/01.png",
+          "file": "source/frames/failed/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12377,
@@ -576,7 +576,7 @@
         },
         {
           "index": 2,
-          "file": "original-local-artifact/02.png",
+          "file": "source/frames/failed/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12216,
@@ -591,7 +591,7 @@
         },
         {
           "index": 3,
-          "file": "original-local-artifact/03.png",
+          "file": "source/frames/failed/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12447,
@@ -606,7 +606,7 @@
         },
         {
           "index": 4,
-          "file": "original-local-artifact/04.png",
+          "file": "source/frames/failed/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12052,
@@ -621,7 +621,7 @@
         },
         {
           "index": 5,
-          "file": "original-local-artifact/05.png",
+          "file": "source/frames/failed/05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12004,
@@ -636,7 +636,7 @@
         },
         {
           "index": 6,
-          "file": "original-local-artifact/06.png",
+          "file": "source/frames/failed/06.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12956,
@@ -651,7 +651,7 @@
         },
         {
           "index": 7,
-          "file": "original-local-artifact/07.png",
+          "file": "source/frames/failed/07.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13012,
@@ -677,14 +677,14 @@
       "frames": [
         {
           "index": 0,
-          "file": "original-local-artifact/00.png",
+          "file": "source/frames/waiting/00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 12701,
+          "nontransparent_pixels": 12690,
           "bbox": [
-            39,
-            7,
-            152,
+            41,
+            5,
+            151,
             203
           ],
           "edge_pixels": 0,
@@ -692,14 +692,14 @@
         },
         {
           "index": 1,
-          "file": "original-local-artifact/01.png",
+          "file": "source/frames/waiting/01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 12724,
+          "nontransparent_pixels": 12412,
           "bbox": [
-            39,
-            5,
-            152,
+            42,
+            7,
+            150,
             203
           ],
           "edge_pixels": 0,
@@ -707,13 +707,13 @@
         },
         {
           "index": 2,
-          "file": "original-local-artifact/02.png",
+          "file": "source/frames/waiting/02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 12439,
+          "nontransparent_pixels": 12299,
           "bbox": [
-            41,
-            6,
+            42,
+            5,
             150,
             203
           ],
@@ -722,14 +722,14 @@
         },
         {
           "index": 3,
-          "file": "original-local-artifact/03.png",
+          "file": "source/frames/waiting/03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 12444,
+          "nontransparent_pixels": 12370,
           "bbox": [
             41,
             5,
-            149,
+            151,
             203
           ],
           "edge_pixels": 0,
@@ -737,14 +737,14 @@
         },
         {
           "index": 4,
-          "file": "original-local-artifact/04.png",
+          "file": "source/frames/waiting/04.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 12310,
+          "nontransparent_pixels": 12315,
           "bbox": [
-            39,
-            13,
-            152,
+            42,
+            7,
+            150,
             203
           ],
           "edge_pixels": 0,
@@ -752,13 +752,13 @@
         },
         {
           "index": 5,
-          "file": "original-local-artifact/05.png",
+          "file": "source/frames/waiting/05.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 12428,
+          "nontransparent_pixels": 12359,
           "bbox": [
             42,
-            6,
+            5,
             150,
             203
           ],
@@ -778,7 +778,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "original-local-artifact/00.png",
+          "file": "source/frames/running/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 14139,
@@ -793,7 +793,7 @@
         },
         {
           "index": 1,
-          "file": "original-local-artifact/01.png",
+          "file": "source/frames/running/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 14254,
@@ -808,7 +808,7 @@
         },
         {
           "index": 2,
-          "file": "original-local-artifact/02.png",
+          "file": "source/frames/running/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 14202,
@@ -823,7 +823,7 @@
         },
         {
           "index": 3,
-          "file": "original-local-artifact/03.png",
+          "file": "source/frames/running/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 14302,
@@ -838,7 +838,7 @@
         },
         {
           "index": 4,
-          "file": "original-local-artifact/04.png",
+          "file": "source/frames/running/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 14147,
@@ -853,7 +853,7 @@
         },
         {
           "index": 5,
-          "file": "original-local-artifact/05.png",
+          "file": "source/frames/running/05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 14109,
@@ -879,14 +879,14 @@
       "frames": [
         {
           "index": 0,
-          "file": "original-local-artifact/00.png",
+          "file": "source/frames/review/00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 12244,
+          "nontransparent_pixels": 12534,
           "bbox": [
-            39,
+            40,
             5,
-            152,
+            151,
             203
           ],
           "edge_pixels": 0,
@@ -894,14 +894,14 @@
         },
         {
           "index": 1,
-          "file": "original-local-artifact/01.png",
+          "file": "source/frames/review/01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 12188,
+          "nontransparent_pixels": 12495,
           "bbox": [
-            39,
-            7,
-            152,
+            40,
+            5,
+            151,
             203
           ],
           "edge_pixels": 0,
@@ -909,14 +909,14 @@
         },
         {
           "index": 2,
-          "file": "original-local-artifact/02.png",
+          "file": "source/frames/review/02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 12042,
+          "nontransparent_pixels": 12497,
           "bbox": [
-            39,
-            8,
-            152,
+            40,
+            5,
+            151,
             203
           ],
           "edge_pixels": 0,
@@ -924,14 +924,14 @@
         },
         {
           "index": 3,
-          "file": "original-local-artifact/03.png",
+          "file": "source/frames/review/03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 12131,
+          "nontransparent_pixels": 12596,
           "bbox": [
-            39,
-            6,
-            152,
+            40,
+            5,
+            151,
             203
           ],
           "edge_pixels": 0,
@@ -939,14 +939,14 @@
         },
         {
           "index": 4,
-          "file": "original-local-artifact/04.png",
+          "file": "source/frames/review/04.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 12391,
+          "nontransparent_pixels": 12507,
           "bbox": [
-            39,
+            40,
             5,
-            152,
+            151,
             203
           ],
           "edge_pixels": 0,
@@ -954,14 +954,14 @@
         },
         {
           "index": 5,
-          "file": "original-local-artifact/05.png",
+          "file": "source/frames/review/05.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 11834,
+          "nontransparent_pixels": 12368,
           "bbox": [
-            43,
-            6,
-            148,
+            40,
+            5,
+            151,
             203
           ],
           "edge_pixels": 0,

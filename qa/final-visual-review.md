@@ -1,9 +1,11 @@
-# Laptop active-work replacement acceptance
+# Community animation update acceptance
 
-New user instruction: replace active-work animation with using laptop. Preserved stable pet ID, name, description, active selection, and all other rows.
+Final atlas SHA-256: 46ee30771904d62a6c0ac8678110a4390afe8a75393e2eae01cf995186cacd89.
 
-New six-frame row inspected in source strip, all extracted 192x208 frames, final native contact sheet, and final animation frame sequence. Laptop lid, keyboard, supporting hand and typing hand are clear; head leans toward screen and eyes blink. Complete connected hands/device/body/tail, planted shoes, consistent face/clothing/head size, no effects, clipping, or detached fragments. Device stays physically supported against forearm and apron.
+Rows 3, 6 and 8 replace greeting, input-waiting and laptop-review actions. Source rows were generated independently with the built-in ImageGen, preserving exact prompts. Initial spacing/arm problems were repaired, then independent final review rejected proportion drift. The accepted revision uses exact native idle/work anchors to preserve the original slender face/body construction and longer visible white socks/shins.
 
-Bundled extraction and inspection passed. Chroma despill was applied exactly once to new row only, before bundled final assembly, to preserve approved old pixels. Ten unrequested rows preserve alpha and visible RGB exactly against fetched pet; gaze rows also pixel-identical to original reviewed atlas. Existing labeled and blind gaze evidence remains applicable, and final labeled direction sheet was visually reconfirmed.
+The selected sources passed bundled component extraction and frame inspection. The packed new rows received exactly one edge-local chroma despill pass; approved existing rows were preserved and never passed through that cleanup again. The bundled standard and extended compositors assembled the final atlas. Eight other rows preserve alpha and visible RGB exactly against the freshly fetched active pet, including laptop work and both original look rows.
 
-Final structural and quality validation pass on exact upload PNG. All required per-state GIFs, all-state GIF and MP4, idle-jump-idle GIF, gaze GIF, labeled sheets and four labeled stills generated from exact final atlas. Current artifacts stored locally under prior authorization replacing Library.
+Final atlas validation, complete frame inspection, quality gate, continuity measurement and Pets MCP preflight passed. The unchanged look directions retain the prior labeled/blind semantic evidence and reviewed warnings, and the final labeled direction sheet was inspected again. Independent visual review accepted the exact final hash after native-size source/atlas/GIF-frame comparisons, including all 16 replaced frames and the 17-frame idle-jump-idle transition.
+
+Final per-state GIFs, all-state GIF and MP4, enhanced-action GIF, idle-jump-idle GIF, look GIF, labeled contact/direction sheets and four labeled stills derive from the same final atlas. Frame-pixel comparison confirmed the final preview frames equal its cells. See independent-visual-review.md for concrete visual evidence and inherited-direction-qa.json for unchanged-look provenance.

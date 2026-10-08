@@ -9,7 +9,7 @@
   "cell_height": 208,
   "columns": 8,
   "rows": 11,
-  "sha256": "f75448d39f3f6f0c0d1c8355142b10686a5d9cba4a2a1ecaeca86247f0c93fc3",
+  "sha256": "46ee30771904d62a6c0ac8678110a4390afe8a75393e2eae01cf995186cacd89",
   "states": [
     {
       "row": 0,
@@ -84,5 +84,11 @@
     "angle_origin": "up",
     "angle_rotation": "clockwise"
   },
-  "active_work_action": "standing and typing on a laptop"
+  "active_work_action": "standing and typing on a laptop",
+  "asset_revision": "community-animation-v2",
+  "enhanced_actions": {
+    "waving": "friendly same-arm greeting with head tilt and warm smile",
+    "waiting": "open palms requesting input with blink and gentle tail movement",
+    "review": "inspecting the existing laptop with eye/head scan and confirming nod"
+  }
 }

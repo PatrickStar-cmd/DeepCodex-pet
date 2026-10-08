@@ -1,6 +1,10 @@
 {
   "ok": true,
-  "changed_row": 7,
+  "changed_rows": [
+    3,
+    6,
+    8
+  ],
   "preserved_rows": [
     {
       "row": 0,
@@ -18,11 +22,6 @@
       "visible_rgb_unchanged": true
     },
     {
-      "row": 3,
-      "alpha_unchanged": true,
-      "visible_rgb_unchanged": true
-    },
-    {
       "row": 4,
       "alpha_unchanged": true,
       "visible_rgb_unchanged": true
@@ -33,12 +32,7 @@
       "visible_rgb_unchanged": true
     },
     {
-      "row": 6,
-      "alpha_unchanged": true,
-      "visible_rgb_unchanged": true
-    },
-    {
-      "row": 8,
+      "row": 7,
       "alpha_unchanged": true,
       "visible_rgb_unchanged": true
     },
@@ -53,5 +47,5 @@
       "visible_rgb_unchanged": true
     }
   ],
-  "method": "Bundled compose_atlas and assemble_extended_atlas compositor functions; native approved gaze cells preserved without normalization."
+  "method": "Bundled compose_atlas and assemble_extended_atlas compositors; single despill pass applied only to packed new rows before reassembly."
 }

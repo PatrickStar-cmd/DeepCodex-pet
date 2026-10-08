@@ -1,0 +1,83 @@
+{
+  "reviewed_on": "2026-10-08",
+  "scope": "native Codex Pets animation assets",
+  "sources": [
+    {
+      "repo": "Sutera-Diffusus/dsh-whale-musume",
+      "sha": "dd7d399aca9dce36d4a96de7153e02bbc4bf1790",
+      "files": [
+        "README.md",
+        "LICENSE",
+        "assets/dsh-whale-moe.js",
+        "lib/client.js",
+        "test/soak-work.mjs"
+      ],
+      "url": "https://github.com/Sutera-Diffusus/dsh-whale-musume/tree/dd7d399aca9dce36d4a96de7153e02bbc4bf1790",
+      "license_observed": "MIT LICENSE file inspected"
+    },
+    {
+      "repo": "vlln/whale-girl",
+      "sha": "9c32d7a39a45148076f8ad2fdaad2dc2420eedb3",
+      "files": [
+        "README.zh.md",
+        "LICENSE",
+        "lib/client/logic.mjs",
+        "lib/src/signals.mjs",
+        "lib/src/interact.mjs",
+        "lib/src/persistence.mjs",
+        "lib/src/pet-state.mjs",
+        "lib/assets/manifest.json"
+      ],
+      "url": "https://github.com/vlln/whale-girl/tree/9c32d7a39a45148076f8ad2fdaad2dc2420eedb3",
+      "license_observed": "MIT LICENSE file inspected"
+    },
+    {
+      "repo": "1190fasheqi/dafeiyu-pet",
+      "sha": "5b0e01856116bd2bae82df1f43c32faa5f056196",
+      "files": [
+        "README.md",
+        "LICENSE",
+        "桌宠.py"
+      ],
+      "url": "https://github.com/1190fasheqi/dafeiyu-pet/tree/5b0e01856116bd2bae82df1f43c32faa5f056196",
+      "license_observed": "MIT LICENSE file inspected"
+    },
+    {
+      "repo": "trc667/deepseek_whalegirl_desktoppet",
+      "sha": "4bd5203189e5f8cc5bfa52ab8a42c42b4b77e5f4",
+      "files": [
+        "README.md",
+        "main.js",
+        "renderer.js"
+      ],
+      "url": "https://github.com/trc667/deepseek_whalegirl_desktoppet/tree/4bd5203189e5f8cc5bfa52ab8a42c42b4b77e5f4",
+      "license_observed": "README claims MIT; no LICENSE file in inspected revision"
+    },
+    {
+      "repo": "AsahiMoon/dsh-desktop-pet",
+      "sha": "a341d9169b01177d96db63f56664da51dce08199",
+      "files": [
+        "README.md",
+        "LICENSE",
+        "NOTICE.md",
+        "main.js",
+        "preload.js",
+        "renderer/core.js",
+        "tests/state-machine.spec.mjs",
+        "tests/task-signal.spec.mjs"
+      ],
+      "url": "https://github.com/AsahiMoon/dsh-desktop-pet/tree/a341d9169b01177d96db63f56664da51dce08199",
+      "license_observed": "MIT LICENSE file inspected"
+    }
+  ],
+  "selected_prompts": {
+    "waving": "prompts/community/waving-proportions-v4.md",
+    "waiting": "prompts/community/waiting-proportions-v3.md",
+    "review": "prompts/community/review-proportions-v2.md"
+  },
+  "changed_rows": [
+    3,
+    6,
+    8
+  ]
+}
