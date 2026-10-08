@@ -1,8 +1,8 @@
 {
   "ok": true,
   "file": "assets/spritesheet.png",
-  "encoded_bytes": 3032451,
-  "sha256": "0f01034e228defa6fad561e568763a1aa4c8d70ebd063c6be64e93986e0b65a5",
+  "encoded_bytes": 3018003,
+  "sha256": "3e9f469de964745b96939f101f2630a14277c9b0b0f72ed03a528598b34e9ad5",
   "format": "PNG",
   "mode": "RGBA",
   "columns": 8,
@@ -19,7 +19,7 @@
       "row": 0,
       "column": 0,
       "used": true,
-      "nontransparent_pixels": 14184,
+      "nontransparent_pixels": 13181,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -28,7 +28,7 @@
       "row": 0,
       "column": 1,
       "used": true,
-      "nontransparent_pixels": 14171,
+      "nontransparent_pixels": 12964,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -37,7 +37,7 @@
       "row": 0,
       "column": 2,
       "used": true,
-      "nontransparent_pixels": 14188,
+      "nontransparent_pixels": 12955,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -46,7 +46,7 @@
       "row": 0,
       "column": 3,
       "used": true,
-      "nontransparent_pixels": 13920,
+      "nontransparent_pixels": 12985,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -55,7 +55,7 @@
       "row": 0,
       "column": 4,
       "used": true,
-      "nontransparent_pixels": 14152,
+      "nontransparent_pixels": 13039,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },
@@ -64,7 +64,7 @@
       "row": 0,
       "column": 5,
       "used": true,
-      "nontransparent_pixels": 14152,
+      "nontransparent_pixels": 13052,
       "opaque_chroma_key_pixels": 0,
       "chroma_fringe_pixels": 0
     },

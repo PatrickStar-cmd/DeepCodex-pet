@@ -29,11 +29,11 @@
           "file": "source/frames\\idle\\00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14184,
+          "nontransparent_pixels": 13181,
           "bbox": [
-            32,
+            37,
             5,
-            159,
+            155,
             203
           ],
           "edge_pixels": 0,
@@ -44,11 +44,11 @@
           "file": "source/frames\\idle\\01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14171,
+          "nontransparent_pixels": 12964,
           "bbox": [
-            34,
+            37,
             5,
-            161,
+            155,
             203
           ],
           "edge_pixels": 0,
@@ -59,11 +59,11 @@
           "file": "source/frames\\idle\\02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14188,
+          "nontransparent_pixels": 12955,
           "bbox": [
-            32,
+            37,
             5,
-            159,
+            154,
             203
           ],
           "edge_pixels": 0,
@@ -74,11 +74,11 @@
           "file": "source/frames\\idle\\03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 13920,
+          "nontransparent_pixels": 12985,
           "bbox": [
-            31,
-            10,
-            158,
+            37,
+            5,
+            155,
             203
           ],
           "edge_pixels": 0,
@@ -89,11 +89,11 @@
           "file": "source/frames\\idle\\04.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14152,
+          "nontransparent_pixels": 13039,
           "bbox": [
-            31,
+            37,
             5,
-            158,
+            155,
             203
           ],
           "edge_pixels": 0,
@@ -104,11 +104,11 @@
           "file": "source/frames\\idle\\05.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14152,
+          "nontransparent_pixels": 13052,
           "bbox": [
-            33,
+            37,
             5,
-            160,
+            155,
             203
           ],
           "edge_pixels": 0,

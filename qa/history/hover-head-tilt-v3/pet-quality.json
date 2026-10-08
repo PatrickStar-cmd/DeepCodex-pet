@@ -1,8 +1,8 @@
 {
   "ok": true,
   "atlas": "assets/spritesheet.png",
-  "encoded_bytes": 3032451,
-  "sha256": "0f01034e228defa6fad561e568763a1aa4c8d70ebd063c6be64e93986e0b65a5",
+  "encoded_bytes": 3018003,
+  "sha256": "3e9f469de964745b96939f101f2630a14277c9b0b0f72ed03a528598b34e9ad5",
   "jump": {
     "idle_baseline": 202,
     "jump_baselines": [
@@ -16,7 +16,7 @@
     "landing_delta_pixels": 0
   },
   "look_registration": {
-    "neutral_center_x": 95.5,
+    "neutral_center_x": 96.0,
     "look_centers_x": [
       97.5,
       96.0,
@@ -67,6 +67,6 @@
     "slot": "jumping",
     "visual_action": "head-tilt",
     "minimum_jump_lift": 0,
-    "reason": "Retains the previous user-requested grounded head-tilt replacement; row 4 is pixel-identical to the last approved version."
+    "reason": "User explicitly requested replacing the jumping animation with a grounded head tilt; structural, alpha, baseline and direction checks remain enabled."
   }
 }

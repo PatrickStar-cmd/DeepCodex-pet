@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "input": "source/revisions/sleepy-row-raw.png",
+  "output": "source/revisions/sleepy-row-clean.png",
+  "chroma_key": "#00FF00",
+  "algorithm": "edge-local-chroma-spill-suppression",
+  "strength": 1,
+  "edge_radius": 5,
+  "spill_tolerance": 0.15,
+  "minimum_saturation": 0.1,
+  "changed_pixels": 12644,
+  "decontaminated_pixels": 12644,
+  "spill_suppressed_pixels": 12644,
+  "rejected_pixels": 0,
+  "changed_by_cell": {
+    "r0c3": 2158,
+    "r0c4": 2137,
+    "r0c2": 2099,
+    "r0c5": 2099,
+    "r0c0": 2079,
+    "r0c1": 2072
+  },
+  "alpha_preserved": true
+}

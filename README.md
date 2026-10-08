@@ -9,7 +9,7 @@
 
 ## 🎬 看看她的动作
 
-九种动作，十六个注视方向。互动动作现在是好奇地歪头、眨眼，再慢慢回正；挥手有微笑，等待有尾尖轻摆，检查有扫视屏幕和小小的点头。
+九种动作，十六个注视方向。待机时眼皮慢慢合上，困得轻轻点头，再抬头睁眼；互动时好奇歪头，挥手有微笑，等待有尾尖轻摆，检查有扫视屏幕和小小的点头。
 
 <table>
   <tr><th>💻 抱电脑开工</th><th>👋 微笑打招呼</th><th>🙌 等你回应</th></tr>
@@ -18,10 +18,10 @@
     <td align="center"><img src="previews/waving.gif" alt="微笑挥手，轻轻歪头" width="192"></td>
     <td align="center"><img src="previews/waiting.gif" alt="摊掌等待回应，眨眼与尾尖轻摆" width="192"></td>
   </tr>
-  <tr><th>🔎 认真复核</th><th>💙 安静陪伴</th><th>🤔 好奇歪头</th></tr>
+  <tr><th>🔎 认真复核</th><th>💤 困倦点头</th><th>🤔 好奇歪头</th></tr>
   <tr>
     <td align="center"><img src="previews/review.gif" alt="抱着笔记本扫视屏幕，轻点头" width="192"></td>
-    <td align="center"><img src="previews/idle.gif" alt="待机呼吸与眨眼" width="192"></td>
+    <td align="center"><img src="previews/sleepy-nod.gif" alt="渐渐闭眼、困倦点头、缓慢抬头睁眼" width="192"></td>
     <td align="center"><img src="previews/head-tilt.gif" alt="好奇地歪头、眨眼、回正，双脚保持落地" width="192"></td>
   </tr>
   <tr><th>🐾 向左走</th><th>🐾 向右走</th><th>🥺 遇到小挫折</th></tr>
@@ -38,7 +38,7 @@
   </tr>
 </table>
 
-📽️ [完整动作 MP4](previews/all-states.mp4) · 🖼️ [四个动作对比](previews/four-stills.png) · 🧭 [注视方向图](previews/direction-sheet.png)
+📽️ [完整动作 MP4](previews/all-states.mp4) · 🖼️ [困倦点头四姿态](previews/four-stills.png) · 🧭 [注视方向图](previews/direction-sheet.png)
 
 ## 📦 把澜澜带到桌面
 
@@ -65,7 +65,7 @@ v2 透明 PNG，**1536 × 2288** 像素，**8 列 × 11 行**；每个单元格 
 
 | 行 | 状态 | 帧数 |
 |---|---|---|
-| 0 | `idle` · 安静陪伴 | 6 |
+| 0 | `idle` · 困倦点头 | 6 |
 | 1 | `running-right` · 向右移动 | 8 |
 | 2 | `running-left` · 向左移动 | 8 |
 | 3 | `waving` · 微笑挥手 | 4 |
@@ -80,6 +80,8 @@ v2 透明 PNG，**1536 × 2288** 像素，**8 列 × 11 行**；每个单元格 
 注视方向以向上为 0°，顺时针每 22.5° 一帧。当前版本将原有五帧 `jumping` 槽位替换为歪头动画，客户端调用这个槽位时会显示歪头。工作、移动、挥手、等待、复核及十六向注视保持原样，沿用 Codex Pets 的触发规则。
 
 [歪头更新记录](docs/head-tilt-update.md) · [六帧动作对比](previews/head-tilt-stills.png)
+
+待机动画在原生六帧槽位内补齐了半闭眼、低头、抬头和重新睁眼的中间姿态，首尾回到休息状态。详见 [困倦点头更新](docs/sleepy-idle-update.md) 和 [逐帧对比](previews/sleepy-nod-stills.png)。
 
 角色与动作由 ImageGen 生成，再完成分帧、透明提取、边缘清理、网格组装和视觉复核。当前文件哈希见 `pet.json`，详细制作证据见 `qa/`。
 

@@ -1,9 +1,13 @@
 {
   "ok": true,
   "changed_rows": [
-    0
+    4
   ],
   "preserved_rows": [
+    {
+      "row": 0,
+      "all_rgba_pixels_unchanged": true
+    },
     {
       "row": 1,
       "all_rgba_pixels_unchanged": true
@@ -14,10 +18,6 @@
     },
     {
       "row": 3,
-      "all_rgba_pixels_unchanged": true
-    },
-    {
-      "row": 4,
       "all_rgba_pixels_unchanged": true
     },
     {

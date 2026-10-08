@@ -1,11 +1,9 @@
-# Head-tilt replacement acceptance
+# Sleepy idle acceptance
 
-Final atlas SHA-256: 3e9f469de964745b96939f101f2630a14277c9b0b0f72ed03a528598b34e9ad5.
+Final atlas SHA-256: 0f01034e228defa6fad561e568763a1aa4c8d70ebd063c6be64e93986e0b65a5.
 
-Only row 4 changes. It retains the five-frame jumping slot but now depicts a grounded, inquisitive head tilt as explicitly requested by the user. Native idle and the freshly downloaded approved atlas grounded the built-in ImageGen strip. The rejected first strip had incomplete edge geometry in its final pose; the accepted second strip restores complete, separated silhouettes.
+Only row 0 changes. Six grounded idle poses add partial eyelid closure, a tiny forward sleepy nod, gradual neck recovery and eyelid reopening. ImageGen used the freshly downloaded atlas and its enlarged native idle anchor. The rejected first source clipped its last tail; the accepted second source used a six-slot guide and reduced source scale to preserve every silhouette.
 
-Bundled component extraction, source frame inspection, edge-local cleanup and atlas composition preserve the five poses. All other ten rows retain every RGBA pixel against the current downloaded pet. The 16 look cells therefore inherit their existing direction and blind-review evidence without regeneration.
+Bundled component extraction, source inspection, composition, transparent edge cleanup and complete atlas/frame inspection passed. Generated poses were registered by translation to the first pose shoe center: all six foot baselines remain 202 and horizontal foot-center range is 0.79 pixels. Native-size comparison was reviewed for attached anatomy, consistent proportions, six-stage progression and matching loop bookends. All other ten rows preserve every RGBA pixel, including the previously approved head-tilt slot and all sixteen look directions.
 
-Final atlas validation and complete frame inspection passed without errors or warnings. The bundled quality gate passed with its minimum jump lift explicitly set to 0 because this slot's requested visual action is head tilt. All five foot baselines equal idle's 202-pixel baseline. Existing reviewed intermediate-direction warnings remain documented. Pets MCP preflight accepted the exact encoded file.
-
-Native-size six-panel comparison was visually inspected for identity, intact tail, shoes, head-tilt progression, blink and bookend alignment. All-state GIF/MP4, each state GIF, the five-frame head-tilt GIF, and idle-to-head-tilt-to-idle GIF were rendered from the final encoded sheet; the transition GIF was displayed before upload. This revision received direct agent visual review; the archived independent reviews apply to the previously accepted, now preserved rows.
+The bundled quality gate passed, retaining the previous user-requested minimum jump lift of zero for the unchanged grounded head-tilt slot. Existing reviewed intermediate-direction warnings remain inherited. Pets structural preflight accepted the exact final encoded file. Current GIFs, contact/direction sheets, all-state MP4 and four pose stills derive from that exact sheet. This revision uses direct agent visual inspection; previously recorded independent reviews apply to preserved artwork only.

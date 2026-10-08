@@ -9,12 +9,13 @@
   "cell_height": 208,
   "columns": 8,
   "rows": 11,
-  "sha256": "3e9f469de964745b96939f101f2630a14277c9b0b0f72ed03a528598b34e9ad5",
+  "sha256": "0f01034e228defa6fad561e568763a1aa4c8d70ebd063c6be64e93986e0b65a5",
   "states": [
     {
       "row": 0,
       "name": "idle",
-      "frames": 6
+      "frames": 6,
+      "visual_action": "sleepy-nod"
     },
     {
       "row": 1,
@@ -86,11 +87,12 @@
     "angle_rotation": "clockwise"
   },
   "active_work_action": "standing and typing on a laptop",
-  "asset_revision": "hover-head-tilt-v3",
+  "asset_revision": "sleepy-idle-v4",
   "enhanced_actions": {
     "waving": "friendly same-arm greeting with head tilt and warm smile",
     "waiting": "open palms requesting input with blink and gentle tail movement",
     "review": "inspecting the existing laptop with eye/head scan and confirming nod",
-    "jumping": "grounded inquisitive head tilt, blink, and return; replaces the original jump in its existing five-frame slot"
+    "jumping": "grounded inquisitive head tilt, blink, and return; replaces the original jump in its existing five-frame slot",
+    "idle": "gradual eyelid closure, small sleepy forward nod, intermediate recovery, and eyes reopening; six-frame seamless resting loop"
   }
 }
