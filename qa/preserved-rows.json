@@ -1,0 +1,57 @@
+{
+  "ok": true,
+  "changed_row": 7,
+  "preserved_rows": [
+    {
+      "row": 0,
+      "alpha_unchanged": true,
+      "visible_rgb_unchanged": true
+    },
+    {
+      "row": 1,
+      "alpha_unchanged": true,
+      "visible_rgb_unchanged": true
+    },
+    {
+      "row": 2,
+      "alpha_unchanged": true,
+      "visible_rgb_unchanged": true
+    },
+    {
+      "row": 3,
+      "alpha_unchanged": true,
+      "visible_rgb_unchanged": true
+    },
+    {
+      "row": 4,
+      "alpha_unchanged": true,
+      "visible_rgb_unchanged": true
+    },
+    {
+      "row": 5,
+      "alpha_unchanged": true,
+      "visible_rgb_unchanged": true
+    },
+    {
+      "row": 6,
+      "alpha_unchanged": true,
+      "visible_rgb_unchanged": true
+    },
+    {
+      "row": 8,
+      "alpha_unchanged": true,
+      "visible_rgb_unchanged": true
+    },
+    {
+      "row": 9,
+      "alpha_unchanged": true,
+      "visible_rgb_unchanged": true
+    },
+    {
+      "row": 10,
+      "alpha_unchanged": true,
+      "visible_rgb_unchanged": true
+    }
+  ],
+  "method": "Bundled compose_atlas and assemble_extended_atlas compositor functions; native approved gaze cells preserved without normalization."
+}

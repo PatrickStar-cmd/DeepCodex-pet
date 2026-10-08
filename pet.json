@@ -1,0 +1,88 @@
+{
+  "name": "澜澜",
+  "description": "蓝发鲸鱼娘，陪伴阅读与思考的工作伙伴。",
+  "sprite_version": 2,
+  "spritesheet": "assets/spritesheet.png",
+  "width": 1536,
+  "height": 2288,
+  "cell_width": 192,
+  "cell_height": 208,
+  "columns": 8,
+  "rows": 11,
+  "sha256": "f75448d39f3f6f0c0d1c8355142b10686a5d9cba4a2a1ecaeca86247f0c93fc3",
+  "states": [
+    {
+      "row": 0,
+      "name": "idle",
+      "frames": 6
+    },
+    {
+      "row": 1,
+      "name": "running-right",
+      "frames": 8
+    },
+    {
+      "row": 2,
+      "name": "running-left",
+      "frames": 8
+    },
+    {
+      "row": 3,
+      "name": "waving",
+      "frames": 4
+    },
+    {
+      "row": 4,
+      "name": "jumping",
+      "frames": 5
+    },
+    {
+      "row": 5,
+      "name": "failed",
+      "frames": 8
+    },
+    {
+      "row": 6,
+      "name": "waiting",
+      "frames": 6
+    },
+    {
+      "row": 7,
+      "name": "running",
+      "frames": 6
+    },
+    {
+      "row": 8,
+      "name": "review",
+      "frames": 6
+    }
+  ],
+  "look": {
+    "rows": [
+      9,
+      10
+    ],
+    "frames_per_row": 8,
+    "angles_degrees": [
+      0.0,
+      22.5,
+      45.0,
+      67.5,
+      90.0,
+      112.5,
+      135.0,
+      157.5,
+      180.0,
+      202.5,
+      225.0,
+      247.5,
+      270.0,
+      292.5,
+      315.0,
+      337.5
+    ],
+    "angle_origin": "up",
+    "angle_rotation": "clockwise"
+  },
+  "active_work_action": "standing and typing on a laptop"
+}
