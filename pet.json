@@ -9,7 +9,7 @@
   "cell_height": 208,
   "columns": 8,
   "rows": 11,
-  "sha256": "46ee30771904d62a6c0ac8678110a4390afe8a75393e2eae01cf995186cacd89",
+  "sha256": "3e9f469de964745b96939f101f2630a14277c9b0b0f72ed03a528598b34e9ad5",
   "states": [
     {
       "row": 0,
@@ -34,7 +34,8 @@
     {
       "row": 4,
       "name": "jumping",
-      "frames": 5
+      "frames": 5,
+      "visual_action": "head-tilt"
     },
     {
       "row": 5,
@@ -85,10 +86,11 @@
     "angle_rotation": "clockwise"
   },
   "active_work_action": "standing and typing on a laptop",
-  "asset_revision": "community-animation-v2",
+  "asset_revision": "hover-head-tilt-v3",
   "enhanced_actions": {
     "waving": "friendly same-arm greeting with head tilt and warm smile",
     "waiting": "open palms requesting input with blink and gentle tail movement",
-    "review": "inspecting the existing laptop with eye/head scan and confirming nod"
+    "review": "inspecting the existing laptop with eye/head scan and confirming nod",
+    "jumping": "grounded inquisitive head tilt, blink, and return; replaces the original jump in its existing five-frame slot"
   }
 }

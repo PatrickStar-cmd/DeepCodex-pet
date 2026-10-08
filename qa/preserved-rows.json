@@ -1,51 +1,48 @@
 {
   "ok": true,
   "changed_rows": [
-    3,
-    6,
-    8
+    4
   ],
   "preserved_rows": [
     {
       "row": 0,
-      "alpha_unchanged": true,
-      "visible_rgb_unchanged": true
+      "all_rgba_pixels_unchanged": true
     },
     {
       "row": 1,
-      "alpha_unchanged": true,
-      "visible_rgb_unchanged": true
+      "all_rgba_pixels_unchanged": true
     },
     {
       "row": 2,
-      "alpha_unchanged": true,
-      "visible_rgb_unchanged": true
+      "all_rgba_pixels_unchanged": true
     },
     {
-      "row": 4,
-      "alpha_unchanged": true,
-      "visible_rgb_unchanged": true
+      "row": 3,
+      "all_rgba_pixels_unchanged": true
     },
     {
       "row": 5,
-      "alpha_unchanged": true,
-      "visible_rgb_unchanged": true
+      "all_rgba_pixels_unchanged": true
+    },
+    {
+      "row": 6,
+      "all_rgba_pixels_unchanged": true
     },
     {
       "row": 7,
-      "alpha_unchanged": true,
-      "visible_rgb_unchanged": true
+      "all_rgba_pixels_unchanged": true
+    },
+    {
+      "row": 8,
+      "all_rgba_pixels_unchanged": true
     },
     {
       "row": 9,
-      "alpha_unchanged": true,
-      "visible_rgb_unchanged": true
+      "all_rgba_pixels_unchanged": true
     },
     {
       "row": 10,
-      "alpha_unchanged": true,
-      "visible_rgb_unchanged": true
+      "all_rgba_pixels_unchanged": true
     }
-  ],
-  "method": "Bundled compose_atlas and assemble_extended_atlas compositors; single despill pass applied only to packed new rows before reassembly."
+  ]
 }

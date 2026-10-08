@@ -1,11 +1,11 @@
-# Community animation update acceptance
+# Head-tilt replacement acceptance
 
-Final atlas SHA-256: 46ee30771904d62a6c0ac8678110a4390afe8a75393e2eae01cf995186cacd89.
+Final atlas SHA-256: 3e9f469de964745b96939f101f2630a14277c9b0b0f72ed03a528598b34e9ad5.
 
-Rows 3, 6 and 8 replace greeting, input-waiting and laptop-review actions. Source rows were generated independently with the built-in ImageGen, preserving exact prompts. Initial spacing/arm problems were repaired, then independent final review rejected proportion drift. The accepted revision uses exact native idle/work anchors to preserve the original slender face/body construction and longer visible white socks/shins.
+Only row 4 changes. It retains the five-frame jumping slot but now depicts a grounded, inquisitive head tilt as explicitly requested by the user. Native idle and the freshly downloaded approved atlas grounded the built-in ImageGen strip. The rejected first strip had incomplete edge geometry in its final pose; the accepted second strip restores complete, separated silhouettes.
 
-The selected sources passed bundled component extraction and frame inspection. The packed new rows received exactly one edge-local chroma despill pass; approved existing rows were preserved and never passed through that cleanup again. The bundled standard and extended compositors assembled the final atlas. Eight other rows preserve alpha and visible RGB exactly against the freshly fetched active pet, including laptop work and both original look rows.
+Bundled component extraction, source frame inspection, edge-local cleanup and atlas composition preserve the five poses. All other ten rows retain every RGBA pixel against the current downloaded pet. The 16 look cells therefore inherit their existing direction and blind-review evidence without regeneration.
 
-Final atlas validation, complete frame inspection, quality gate, continuity measurement and Pets MCP preflight passed. The unchanged look directions retain the prior labeled/blind semantic evidence and reviewed warnings, and the final labeled direction sheet was inspected again. Independent visual review accepted the exact final hash after native-size source/atlas/GIF-frame comparisons, including all 16 replaced frames and the 17-frame idle-jump-idle transition.
+Final atlas validation and complete frame inspection passed without errors or warnings. The bundled quality gate passed with its minimum jump lift explicitly set to 0 because this slot's requested visual action is head tilt. All five foot baselines equal idle's 202-pixel baseline. Existing reviewed intermediate-direction warnings remain documented. Pets MCP preflight accepted the exact encoded file.
 
-Final per-state GIFs, all-state GIF and MP4, enhanced-action GIF, idle-jump-idle GIF, look GIF, labeled contact/direction sheets and four labeled stills derive from the same final atlas. Frame-pixel comparison confirmed the final preview frames equal its cells. See independent-visual-review.md for concrete visual evidence and inherited-direction-qa.json for unchanged-look provenance.
+Native-size six-panel comparison was visually inspected for identity, intact tail, shoes, head-tilt progression, blink and bookend alignment. All-state GIF/MP4, each state GIF, the five-frame head-tilt GIF, and idle-to-head-tilt-to-idle GIF were rendered from the final encoded sheet; the transition GIF was displayed before upload. This revision received direct agent visual review; the archived independent reviews apply to the previously accepted, now preserved rows.

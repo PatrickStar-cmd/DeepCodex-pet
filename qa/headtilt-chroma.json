@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "input": "source/revisions/headtilt-row-raw.png",
+  "output": "source/revisions/headtilt-row-clean.png",
+  "chroma_key": "#00FF00",
+  "algorithm": "edge-local-chroma-spill-suppression",
+  "strength": 1,
+  "edge_radius": 5,
+  "spill_tolerance": 0.15,
+  "minimum_saturation": 0.1,
+  "changed_pixels": 11064,
+  "decontaminated_pixels": 11064,
+  "spill_suppressed_pixels": 11064,
+  "rejected_pixels": 0,
+  "changed_by_cell": {
+    "r0c3": 2261,
+    "r0c2": 2243,
+    "r0c0": 2198,
+    "r0c1": 2194,
+    "r0c4": 2168
+  },
+  "alpha_preserved": true
+}

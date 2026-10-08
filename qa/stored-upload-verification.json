@@ -2,5 +2,6 @@
   "ok": true,
   "stored_pixels_equal_validated_upload": true,
   "width": 1536,
-  "height": 2288
+  "height": 2288,
+  "sha256": "3e9f469de964745b96939f101f2630a14277c9b0b0f72ed03a528598b34e9ad5"
 }

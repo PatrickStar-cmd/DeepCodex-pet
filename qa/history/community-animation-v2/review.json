@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "frames_root": "source/frames",
+  "frames_root": "original-local-artifact/frames",
   "states": [
     "idle",
     "running-right",
@@ -26,7 +26,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "source/frames\\idle\\00.png",
+          "file": "source/frames/idle/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13181,
@@ -41,7 +41,7 @@
         },
         {
           "index": 1,
-          "file": "source/frames\\idle\\01.png",
+          "file": "source/frames/idle/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12964,
@@ -56,7 +56,7 @@
         },
         {
           "index": 2,
-          "file": "source/frames\\idle\\02.png",
+          "file": "source/frames/idle/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12955,
@@ -71,7 +71,7 @@
         },
         {
           "index": 3,
-          "file": "source/frames\\idle\\03.png",
+          "file": "source/frames/idle/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12985,
@@ -86,7 +86,7 @@
         },
         {
           "index": 4,
-          "file": "source/frames\\idle\\04.png",
+          "file": "source/frames/idle/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13039,
@@ -101,7 +101,7 @@
         },
         {
           "index": 5,
-          "file": "source/frames\\idle\\05.png",
+          "file": "source/frames/idle/05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13052,
@@ -127,7 +127,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "source/frames\\running-right\\00.png",
+          "file": "source/frames/running-right/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13467,
@@ -142,7 +142,7 @@
         },
         {
           "index": 1,
-          "file": "source/frames\\running-right\\01.png",
+          "file": "source/frames/running-right/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12348,
@@ -157,7 +157,7 @@
         },
         {
           "index": 2,
-          "file": "source/frames\\running-right\\02.png",
+          "file": "source/frames/running-right/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12353,
@@ -172,7 +172,7 @@
         },
         {
           "index": 3,
-          "file": "source/frames\\running-right\\03.png",
+          "file": "source/frames/running-right/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12479,
@@ -187,7 +187,7 @@
         },
         {
           "index": 4,
-          "file": "source/frames\\running-right\\04.png",
+          "file": "source/frames/running-right/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13504,
@@ -202,7 +202,7 @@
         },
         {
           "index": 5,
-          "file": "source/frames\\running-right\\05.png",
+          "file": "source/frames/running-right/05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12401,
@@ -217,7 +217,7 @@
         },
         {
           "index": 6,
-          "file": "source/frames\\running-right\\06.png",
+          "file": "source/frames/running-right/06.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12703,
@@ -232,7 +232,7 @@
         },
         {
           "index": 7,
-          "file": "source/frames\\running-right\\07.png",
+          "file": "source/frames/running-right/07.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12518,
@@ -258,7 +258,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "source/frames\\running-left\\00.png",
+          "file": "source/frames/running-left/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13343,
@@ -273,7 +273,7 @@
         },
         {
           "index": 1,
-          "file": "source/frames\\running-left\\01.png",
+          "file": "source/frames/running-left/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12113,
@@ -288,7 +288,7 @@
         },
         {
           "index": 2,
-          "file": "source/frames\\running-left\\02.png",
+          "file": "source/frames/running-left/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12313,
@@ -303,7 +303,7 @@
         },
         {
           "index": 3,
-          "file": "source/frames\\running-left\\03.png",
+          "file": "source/frames/running-left/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12117,
@@ -318,7 +318,7 @@
         },
         {
           "index": 4,
-          "file": "source/frames\\running-left\\04.png",
+          "file": "source/frames/running-left/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13325,
@@ -333,7 +333,7 @@
         },
         {
           "index": 5,
-          "file": "source/frames\\running-left\\05.png",
+          "file": "source/frames/running-left/05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 11908,
@@ -348,7 +348,7 @@
         },
         {
           "index": 6,
-          "file": "source/frames\\running-left\\06.png",
+          "file": "source/frames/running-left/06.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12596,
@@ -363,7 +363,7 @@
         },
         {
           "index": 7,
-          "file": "source/frames\\running-left\\07.png",
+          "file": "source/frames/running-left/07.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12526,
@@ -389,7 +389,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "source/frames\\waving\\00.png",
+          "file": "source/frames/waving/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13020,
@@ -404,7 +404,7 @@
         },
         {
           "index": 1,
-          "file": "source/frames\\waving\\01.png",
+          "file": "source/frames/waving/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13060,
@@ -419,7 +419,7 @@
         },
         {
           "index": 2,
-          "file": "source/frames\\waving\\02.png",
+          "file": "source/frames/waving/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13234,
@@ -434,7 +434,7 @@
         },
         {
           "index": 3,
-          "file": "source/frames\\waving\\03.png",
+          "file": "source/frames/waving/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12987,
@@ -460,14 +460,14 @@
       "frames": [
         {
           "index": 0,
-          "file": "source/frames\\jumping\\00.png",
+          "file": "source/frames/jumping/00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14519,
+          "nontransparent_pixels": 10754,
           "bbox": [
-            28,
-            5,
-            164,
+            33,
+            46,
+            158,
             203
           ],
           "edge_pixels": 0,
@@ -475,59 +475,59 @@
         },
         {
           "index": 1,
-          "file": "source/frames\\jumping\\01.png",
+          "file": "source/frames/jumping/01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14738,
+          "nontransparent_pixels": 11259,
           "bbox": [
-            28,
-            5,
-            164,
-            203
+            33,
+            23,
+            158,
+            200
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
-          "file": "source/frames\\jumping\\02.png",
+          "file": "source/frames/jumping/02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14757,
+          "nontransparent_pixels": 11346,
           "bbox": [
-            28,
+            33,
             5,
-            164,
-            203
+            158,
+            176
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 3,
-          "file": "source/frames\\jumping\\03.png",
+          "file": "source/frames/jumping/03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14623,
+          "nontransparent_pixels": 11313,
           "bbox": [
-            28,
-            5,
-            164,
-            203
+            33,
+            23,
+            158,
+            199
           ],
           "edge_pixels": 0,
           "chroma_adjacent_pixels": 0
         },
         {
           "index": 4,
-          "file": "source/frames\\jumping\\04.png",
+          "file": "source/frames/jumping/04.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14391,
+          "nontransparent_pixels": 10782,
           "bbox": [
-            29,
-            5,
-            163,
+            33,
+            43,
+            158,
             203
           ],
           "edge_pixels": 0,
@@ -546,7 +546,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "source/frames\\failed\\00.png",
+          "file": "source/frames/failed/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13130,
@@ -561,7 +561,7 @@
         },
         {
           "index": 1,
-          "file": "source/frames\\failed\\01.png",
+          "file": "source/frames/failed/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12377,
@@ -576,7 +576,7 @@
         },
         {
           "index": 2,
-          "file": "source/frames\\failed\\02.png",
+          "file": "source/frames/failed/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12216,
@@ -591,7 +591,7 @@
         },
         {
           "index": 3,
-          "file": "source/frames\\failed\\03.png",
+          "file": "source/frames/failed/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12447,
@@ -606,7 +606,7 @@
         },
         {
           "index": 4,
-          "file": "source/frames\\failed\\04.png",
+          "file": "source/frames/failed/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12052,
@@ -621,7 +621,7 @@
         },
         {
           "index": 5,
-          "file": "source/frames\\failed\\05.png",
+          "file": "source/frames/failed/05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12004,
@@ -636,7 +636,7 @@
         },
         {
           "index": 6,
-          "file": "source/frames\\failed\\06.png",
+          "file": "source/frames/failed/06.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12956,
@@ -651,7 +651,7 @@
         },
         {
           "index": 7,
-          "file": "source/frames\\failed\\07.png",
+          "file": "source/frames/failed/07.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 13012,
@@ -677,7 +677,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "source/frames\\waiting\\00.png",
+          "file": "source/frames/waiting/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12690,
@@ -692,7 +692,7 @@
         },
         {
           "index": 1,
-          "file": "source/frames\\waiting\\01.png",
+          "file": "source/frames/waiting/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12412,
@@ -707,7 +707,7 @@
         },
         {
           "index": 2,
-          "file": "source/frames\\waiting\\02.png",
+          "file": "source/frames/waiting/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12299,
@@ -722,7 +722,7 @@
         },
         {
           "index": 3,
-          "file": "source/frames\\waiting\\03.png",
+          "file": "source/frames/waiting/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12370,
@@ -737,7 +737,7 @@
         },
         {
           "index": 4,
-          "file": "source/frames\\waiting\\04.png",
+          "file": "source/frames/waiting/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12315,
@@ -752,7 +752,7 @@
         },
         {
           "index": 5,
-          "file": "source/frames\\waiting\\05.png",
+          "file": "source/frames/waiting/05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12359,
@@ -778,7 +778,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "source/frames\\running\\00.png",
+          "file": "source/frames/running/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 14139,
@@ -793,7 +793,7 @@
         },
         {
           "index": 1,
-          "file": "source/frames\\running\\01.png",
+          "file": "source/frames/running/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 14254,
@@ -808,7 +808,7 @@
         },
         {
           "index": 2,
-          "file": "source/frames\\running\\02.png",
+          "file": "source/frames/running/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 14202,
@@ -823,7 +823,7 @@
         },
         {
           "index": 3,
-          "file": "source/frames\\running\\03.png",
+          "file": "source/frames/running/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 14302,
@@ -838,7 +838,7 @@
         },
         {
           "index": 4,
-          "file": "source/frames\\running\\04.png",
+          "file": "source/frames/running/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 14147,
@@ -853,7 +853,7 @@
         },
         {
           "index": 5,
-          "file": "source/frames\\running\\05.png",
+          "file": "source/frames/running/05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 14109,
@@ -879,7 +879,7 @@
       "frames": [
         {
           "index": 0,
-          "file": "source/frames\\review\\00.png",
+          "file": "source/frames/review/00.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12534,
@@ -894,7 +894,7 @@
         },
         {
           "index": 1,
-          "file": "source/frames\\review\\01.png",
+          "file": "source/frames/review/01.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12495,
@@ -909,7 +909,7 @@
         },
         {
           "index": 2,
-          "file": "source/frames\\review\\02.png",
+          "file": "source/frames/review/02.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12497,
@@ -924,7 +924,7 @@
         },
         {
           "index": 3,
-          "file": "source/frames\\review\\03.png",
+          "file": "source/frames/review/03.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12596,
@@ -939,7 +939,7 @@
         },
         {
           "index": 4,
-          "file": "source/frames\\review\\04.png",
+          "file": "source/frames/review/04.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12507,
@@ -954,7 +954,7 @@
         },
         {
           "index": 5,
-          "file": "source/frames\\review\\05.png",
+          "file": "source/frames/review/05.png",
           "width": 192,
           "height": 208,
           "nontransparent_pixels": 12368,

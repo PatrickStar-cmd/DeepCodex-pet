@@ -3,13 +3,13 @@
 **一只在你工作时伴你左右的蓝发鲸鱼娘。💙**
 
 
-💻 开工时专心打字 · 👋 见面时微笑挥手 · 🙌 等回应时摊开双手 · 🔎 复核时认真看屏幕
+💻 开工时专心打字 · 👋 见面时微笑挥手 · 🤔 互动时轻轻歪头 · 🙌 等回应时摊开双手 · 🔎 复核时认真看屏幕
 
 ![澜澜使用笔记本电脑](previews/laptop-work.gif)
 
 ## 🎬 看看她的动作
 
-九种动作，十六个注视方向。挥手有轻轻的歪头，等待有眨眼和尾尖轻摆，检查有扫视屏幕和小小的点头。
+九种动作，十六个注视方向。互动动作现在是好奇地歪头、眨眼，再慢慢回正；挥手有微笑，等待有尾尖轻摆，检查有扫视屏幕和小小的点头。
 
 <table>
   <tr><th>💻 抱电脑开工</th><th>👋 微笑打招呼</th><th>🙌 等你回应</th></tr>
@@ -18,11 +18,11 @@
     <td align="center"><img src="previews/waving.gif" alt="微笑挥手，轻轻歪头" width="192"></td>
     <td align="center"><img src="previews/waiting.gif" alt="摊掌等待回应，眨眼与尾尖轻摆" width="192"></td>
   </tr>
-  <tr><th>🔎 认真复核</th><th>💙 安静陪伴</th><th>✨ 轻轻一跃</th></tr>
+  <tr><th>🔎 认真复核</th><th>💙 安静陪伴</th><th>🤔 好奇歪头</th></tr>
   <tr>
     <td align="center"><img src="previews/review.gif" alt="抱着笔记本扫视屏幕，轻点头" width="192"></td>
     <td align="center"><img src="previews/idle.gif" alt="待机呼吸与眨眼" width="192"></td>
-    <td align="center"><img src="previews/jumping.gif" alt="起跳、腾空、落地" width="192"></td>
+    <td align="center"><img src="previews/head-tilt.gif" alt="好奇地歪头、眨眼、回正，双脚保持落地" width="192"></td>
   </tr>
   <tr><th>🐾 向左走</th><th>🐾 向右走</th><th>🥺 遇到小挫折</th></tr>
   <tr>
@@ -30,10 +30,10 @@
     <td align="center"><img src="previews/running-right.gif" alt="向右移动" width="192"></td>
     <td align="center"><img src="previews/failed.gif" alt="任务失败时的表情反馈" width="192"></td>
   </tr>
-  <tr><th>👀 十六向注视</th><th>🌊 待机 → 跳跃 → 待机</th><th>🎞️ 完整动作巡览</th></tr>
+  <tr><th>👀 十六向注视</th><th>🌊 待机 → 歪头 → 待机</th><th>🎞️ 完整动作巡览</th></tr>
   <tr>
     <td align="center"><img src="previews/look-loop.gif" alt="顺时针十六个注视方向" width="192"></td>
-    <td align="center"><img src="previews/idle-jump-idle.gif" alt="待机到跳跃再回到待机的连续动作" width="192"></td>
+    <td align="center"><img src="previews/idle-head-tilt-idle.gif" alt="待机到歪头再回到待机的连续动作" width="192"></td>
     <td align="center"><img src="previews/all-states.gif" alt="全部九种动作连续展示" width="192"></td>
   </tr>
 </table>
@@ -69,7 +69,7 @@ v2 透明 PNG，**1536 × 2288** 像素，**8 列 × 11 行**；每个单元格 
 | 1 | `running-right` · 向右移动 | 8 |
 | 2 | `running-left` · 向左移动 | 8 |
 | 3 | `waving` · 微笑挥手 | 4 |
-| 4 | `jumping` · 跳跃 | 5 |
+| 4 | `jumping` 槽位 · 好奇歪头 | 5 |
 | 5 | `failed` · 挫折反馈 | 8 |
 | 6 | `waiting` · 摊掌等待回应 | 6 |
 | 7 | `running` · 笔记本工作 | 6 |
@@ -77,7 +77,9 @@ v2 透明 PNG，**1536 × 2288** 像素，**8 列 × 11 行**；每个单元格 
 | 9 | 注视 0° 至 157.5° | 8 |
 | 10 | 注视 180° 至 337.5° | 8 |
 
-注视方向以向上为 0°，顺时针每 22.5° 一帧。当前版本增强了挥手、等待与复核动作，保留了原有工作、移动、跳跃和注视素材。
+注视方向以向上为 0°，顺时针每 22.5° 一帧。当前版本将原有五帧 `jumping` 槽位替换为歪头动画，客户端调用这个槽位时会显示歪头。工作、移动、挥手、等待、复核及十六向注视保持原样，沿用 Codex Pets 的触发规则。
+
+[歪头更新记录](docs/head-tilt-update.md) · [六帧动作对比](previews/head-tilt-stills.png)
 
 角色与动作由 ImageGen 生成，再完成分帧、透明提取、边缘清理、网格组装和视觉复核。当前文件哈希见 `pet.json`，详细制作证据见 `qa/`。
 
