@@ -81,7 +81,7 @@ v2 透明 PNG，**1536 × 2288** 像素，**8 列 × 11 行**；每个单元格 
 
 [歪头更新记录](docs/head-tilt-update.md) · [六帧动作对比](previews/head-tilt-stills.png)
 
-待机动画在原生六帧槽位内补齐了半闭眼、低头、抬头和重新睁眼的中间姿态，首尾回到休息状态。详见 [困倦点头更新](docs/sleepy-idle-update.md) 和 [逐帧对比](previews/sleepy-nod-stills.png)。
+待机动画采用轻浅点头，抬头先保持闭眼，再慢慢睁眼；六帧按客户端实际速度预览，一轮 6.6 秒。详见 [困倦点头更新](docs/sleepy-idle-update.md) 和 [逐帧对比](previews/sleepy-nod-stills.png)。工作画面提前回到待机的客户端规则见 [循环核查](docs/work-animation-loop.md)。
 
 角色与动作由 ImageGen 生成，再完成分帧、透明提取、边缘清理、网格组装和视觉复核。当前文件哈希见 `pet.json`，详细制作证据见 `qa/`。
 

@@ -1,9 +1,11 @@
-# Sleepy idle acceptance
+# Idle v5 follow-up review
 
-Final atlas SHA-256: 0f01034e228defa6fad561e568763a1aa4c8d70ebd063c6be64e93986e0b65a5.
+Final atlas SHA-256: 55c0a9da7cacfc64348daa455fd6481d5be80497dcfde77213dae4d9a07093b1.
 
-Only row 0 changes. Six grounded idle poses add partial eyelid closure, a tiny forward sleepy nod, gradual neck recovery and eyelid reopening. ImageGen used the freshly downloaded atlas and its enlarged native idle anchor. The rejected first source clipped its last tail; the accepted second source used a six-slot guide and reduced source scale to preserve every silhouette.
+Reviewed the six ordered native-size frames from the exact validated atlas. The shallow low point is followed by a closed-eye recovery pose and a partly open recovery pose, then rest. Head-top change between neighboring frames is at most 2 pixels versus the previous low-to-recovery change of 5 pixels. Shoes remain planted; attached hair, ear fins, headband and whale tail are complete and have no neighboring-cell bleed.
 
-Bundled component extraction, source inspection, composition, transparent edge cleanup and complete atlas/frame inspection passed. Generated poses were registered by translation to the first pose shoe center: all six foot baselines remain 202 and horizontal foot-center range is 0.79 pixels. Native-size comparison was reviewed for attached anatomy, consistent proportions, six-stage progression and matching loop bookends. All other ten rows preserve every RGBA pixel, including the previously approved head-tilt slot and all sixteen look directions.
+The native-speed GIF uses the installed client's idle multiplier of six (6.6 seconds per cycle). A separately labeled fast review GIF remains available for checking the ordered poses. The rest-to-head-tilt-to-rest and all-state previews were regenerated from the final atlas. The six-frame strip and animated preview were presented before upload.
 
-The bundled quality gate passed, retaining the previous user-requested minimum jump lift of zero for the unchanged grounded head-tilt slot. Existing reviewed intermediate-direction warnings remain inherited. Pets structural preflight accepted the exact final encoded file. Current GIFs, contact/direction sheets, all-state MP4 and four pose stills derive from that exact sheet. This revision uses direct agent visual inspection; previously recorded independent reviews apply to preserved artwork only.
+Bundled component extraction, frame inspection, atlas validation and final quality gate passed. Rows 1 through 10, including all sixteen look directions, preserve every RGBA pixel of the downloaded active pet. Existing reviewed direction warnings remain unchanged. Row 4 retains the previously requested grounded head tilt and its zero-lift quality-gate override.
+
+The work-loop investigation found a finite default playback path in the installed client; this update does not claim to repair that runtime behavior. No independent desktop program was created or resumed. Prior v4 reports are archived in qa/history/sleepy-idle-v4/.

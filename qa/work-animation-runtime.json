@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "scope": "Read-only inspection and isolated execution of installed playback function; no live UI timing reproduction",
+  "installed_client_version": "26.1002.7124.0",
+  "default_loop_option": false,
+  "default_work_cycles": 3,
+  "work_frames": 6,
+  "work_cycle_duration_ms": 820,
+  "work_duration_before_idle_ms": 2460,
+  "fallback_row": 0,
+  "idle_duration_multiplier": 6,
+  "idle_cycle_duration_ms": 6600,
+  "continuous_mode_available_in_player": true,
+  "continuous_mode_passed_by_avatar_button": false,
+  "runtime_fix_applied": false,
+  "playback_function_sha256": "3804e1b6494f91af8cee0ba5f992b2638e63ec639da3c8e3f5926b8013e15a1e"
+}

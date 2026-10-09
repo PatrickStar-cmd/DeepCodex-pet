@@ -1,0 +1,68 @@
+{
+  "source_strip_outer_edges_clear": true,
+  "shoe_baselines": [
+    202,
+    202,
+    202,
+    202,
+    202,
+    202
+  ],
+  "shoe_horizontal_centers": [
+    83.92121212121212,
+    84.25252525252525,
+    83.91482965931864,
+    84.10583580613255,
+    83.46146146146147,
+    84.05220883534136
+  ],
+  "maximum_foot_center_range_pixels": 0.7910637910637774,
+  "head_top_by_frame": [
+    7,
+    7,
+    7,
+    12,
+    7,
+    6
+  ],
+  "first_last_changed_pixels": 14550,
+  "pose_progression": [
+    "rest",
+    "partial eyelid closure",
+    "closed eyes and shallow nod",
+    "closed eyes and deepest gentle nod",
+    "partial eyelid reopening and recovery",
+    "rest"
+  ],
+  "visual_review": "Complete silhouettes, stable whole-body proportions, six readable intermediate poses, and matching loop bookends reviewed at native size.",
+  "registration": {
+    "method": "Register generated idle cells to the first pose shoe center using translation only; retain common scale and the intentional head nod.",
+    "target_foot_center": 83.92121212121212,
+    "translations": [
+      {
+        "frame": 0,
+        "x_translation": 0
+      },
+      {
+        "frame": 1,
+        "x_translation": 2
+      },
+      {
+        "frame": 2,
+        "x_translation": 0
+      },
+      {
+        "frame": 3,
+        "x_translation": -1
+      },
+      {
+        "frame": 4,
+        "x_translation": -1
+      },
+      {
+        "frame": 5,
+        "x_translation": 1
+      }
+    ]
+  }
+}

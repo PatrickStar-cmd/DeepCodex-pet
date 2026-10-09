@@ -1,10 +1,10 @@
 {
   "ok": true,
   "atlas": "assets/spritesheet.png",
-  "encoded_bytes": 3034404,
-  "sha256": "55c0a9da7cacfc64348daa455fd6481d5be80497dcfde77213dae4d9a07093b1",
+  "encoded_bytes": 3032451,
+  "sha256": "0f01034e228defa6fad561e568763a1aa4c8d70ebd063c6be64e93986e0b65a5",
   "jump": {
-    "idle_baseline": 201,
+    "idle_baseline": 202,
     "jump_baselines": [
       202,
       202,
@@ -13,10 +13,10 @@
       202
     ],
     "airborne_lift_pixels": 0,
-    "landing_delta_pixels": 1
+    "landing_delta_pixels": 0
   },
   "look_registration": {
-    "neutral_center_x": 96.5,
+    "neutral_center_x": 95.5,
     "look_centers_x": [
       97.5,
       96.0,
@@ -53,7 +53,7 @@
       112,
       112
     ],
-    "maximum_center_drift_pixels": 2.5,
+    "maximum_center_drift_pixels": 2.0,
     "maximum_width_ratio": 1.0360360360360361
   },
   "errors": [],
@@ -67,6 +67,6 @@
     "slot": "jumping",
     "visual_action": "head-tilt",
     "minimum_jump_lift": 0,
-    "reason": "User-requested grounded head-tilt; unchanged row 4 retained."
+    "reason": "Retains the previous user-requested grounded head-tilt replacement; row 4 is pixel-identical to the last approved version."
   }
 }

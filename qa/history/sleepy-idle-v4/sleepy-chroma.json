@@ -8,17 +8,17 @@
   "edge_radius": 5,
   "spill_tolerance": 0.15,
   "minimum_saturation": 0.1,
-  "changed_pixels": 8918,
-  "decontaminated_pixels": 8795,
-  "spill_suppressed_pixels": 8918,
+  "changed_pixels": 12644,
+  "decontaminated_pixels": 12644,
+  "spill_suppressed_pixels": 12644,
   "rejected_pixels": 0,
   "changed_by_cell": {
-    "r0c3": 1500,
-    "r0c2": 1499,
-    "r0c1": 1495,
-    "r0c0": 1485,
-    "r0c4": 1481,
-    "r0c5": 1458
+    "r0c3": 2158,
+    "r0c4": 2137,
+    "r0c2": 2099,
+    "r0c5": 2099,
+    "r0c0": 2079,
+    "r0c1": 2072
   },
   "alpha_preserved": true
 }

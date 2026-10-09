@@ -21,90 +21,90 @@
           "file": "source/frames\\idle\\00.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14704,
+          "nontransparent_pixels": 14184,
           "bbox": [
-            33,
+            32,
             5,
-            158,
+            159,
             203
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 51
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 1,
           "file": "source/frames\\idle\\01.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14488,
+          "nontransparent_pixels": 14171,
           "bbox": [
-            33,
+            32,
             5,
-            158,
+            159,
             203
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 44
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 2,
           "file": "source/frames\\idle\\02.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14272,
+          "nontransparent_pixels": 14188,
           "bbox": [
-            33,
-            7,
-            158,
+            32,
+            5,
+            159,
             203
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 70
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 3,
           "file": "source/frames\\idle\\03.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14453,
+          "nontransparent_pixels": 13920,
           "bbox": [
-            33,
-            5,
-            158,
+            32,
+            10,
+            159,
             203
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 59
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 4,
           "file": "source/frames\\idle\\04.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14545,
+          "nontransparent_pixels": 14152,
           "bbox": [
-            33,
+            32,
             5,
-            158,
+            159,
             203
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 58
+          "chroma_adjacent_pixels": 0
         },
         {
           "index": 5,
           "file": "source/frames\\idle\\05.png",
           "width": 192,
           "height": 208,
-          "nontransparent_pixels": 14518,
+          "nontransparent_pixels": 14152,
           "bbox": [
-            33,
+            32,
             5,
-            158,
+            159,
             203
           ],
           "edge_pixels": 0,
-          "chroma_adjacent_pixels": 66
+          "chroma_adjacent_pixels": 0
         }
       ]
     }

@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "changed_rows": [
+    0
+  ],
+  "preserved_rows": [
+    {
+      "row": 1,
+      "all_rgba_pixels_unchanged": true
+    },
+    {
+      "row": 2,
+      "all_rgba_pixels_unchanged": true
+    },
+    {
+      "row": 3,
+      "all_rgba_pixels_unchanged": true
+    },
+    {
+      "row": 4,
+      "all_rgba_pixels_unchanged": true
+    },
+    {
+      "row": 5,
+      "all_rgba_pixels_unchanged": true
+    },
+    {
+      "row": 6,
+      "all_rgba_pixels_unchanged": true
+    },
+    {
+      "row": 7,
+      "all_rgba_pixels_unchanged": true
+    },
+    {
+      "row": 8,
+      "all_rgba_pixels_unchanged": true
+    },
+    {
+      "row": 9,
+      "all_rgba_pixels_unchanged": true
+    },
+    {
+      "row": 10,
+      "all_rgba_pixels_unchanged": true
+    }
+  ]
+}
