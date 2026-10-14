@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>大肥鱼 · dot 适配预览</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 32px; font: 15px/1.6 system-ui, sans-serif; background: #eef3fa; color: #17253b; }
+  main { max-width: 1000px; margin: auto; }
+  h1 { margin: 0; font-size: 28px; } h2 { font-size: 18px; }
+  p { color: #52617a; } .note { font-size: 13px; }
+  .controls { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin: 24px 0; }
+  select,button { font: inherit; padding: 7px 12px; border: 1px solid #a9b8cf; border-radius: 8px; background: white; }
+  .panel { border: 1px solid #ccd8e8; border-radius: 16px; background: white; padding: 24px; margin: 16px 0; }
+  .dark { background: #182234; color: #e4edfc; border-color: #354661; }
+  .samples { display: flex; align-items: end; flex-wrap: wrap; gap: 32px; min-height: 160px; }
+  figure { margin: 0; display: flex; align-items: center; flex-direction: column; gap: 16px; }
+  figcaption { font-size: 12px; }
+  .avatar { display: inline-flex; align-items: center; justify-content: center; width: var(--size); height: var(--size); }
+  .position { pointer-events: none; display: inline-flex; width: 100%; height: 100%; align-items: center; justify-content: center; transform-origin: center; }
+  .sprite { flex-shrink: 0; width: auto; height: 100%; aspect-ratio: 192/208; image-rendering: pixelated; background: url('../assets/spritesheet.png') no-repeat; background-size: 800% 1100%; }
+  .directions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; }
+  .directions figure { gap: 8px; }
+  #status { font-size: 13px; }
+</style>
+<main>
+  <h1>大肥鱼 <small>· dot 适配预览</small></h1>
+  <p>沿用鲸鱼娘全身形象，按本机 Codex dot 的内容边界、缩放、像素采样及动作节奏预览。</p>
+  <div class="controls">
+    <label>动作 <select id="state">
+      <option value="idle">困倦待机</option><option value="running">笔记本工作</option>
+      <option value="review">认真复核</option><option value="waiting">等待回应</option>
+      <option value="waving">微笑挥手</option><option value="jumping">好奇歪头</option>
+      <option value="failed">挫折反馈</option><option value="running-left">向左移动</option><option value="running-right">向右移动</option>
+    </select></label>
+    <label><input id="reduced" type="checkbox"> 减少动态效果（首帧）</label>
+    <button id="pause">暂停</button>
+    <span id="status" aria-live="polite"></span>
+  </div>
+  <section class="panel"><h2>浅色背景</h2><div class="samples"></div></section>
+  <section class="panel dark"><h2>深色背景</h2><div class="samples"></div></section>
+  <section class="panel"><h2>十六向注视 · 48 px</h2><div class="directions"></div></section>
+  <p class="note">16 / 20 / 32 px 为客户端小图标尺寸；64 / 96 px 用于细节检查。小图标保留蓝白轮廓，完整表情建议在较大的 dot 或桌宠视图观察。本页为素材预览，不代表已在应用中切换当前 dot。</p>
+  <p class="note">dot 使用持续循环；悬停桌宠按钮则调用第 4 行歪头。减少动态效果时保持该状态首帧。</p>
+</main>
+<script>
+  const counts = [6,8,8,4,5,8,6,6,6];
+  const states = ['idle','running-right','running-left','waving','jumping','failed','waiting','running','review'];
+  const durations = [null,[120,220],[120,220],[140,280],[140,280],[140,240],[150,260],[120,220],[150,280]];
+  let bounds, ready = false, timer, column = 0, paused = false;
+  const sprites = [];
+  function avatar(size, target, label, direction) {
+    const figure = document.createElement('figure');
+    figure.innerHTML = `<span class="avatar" style="--size:${size}px"><span class="position"><span class="sprite"></span></span></span><figcaption>${label}</figcaption>`;
+    const sprite = figure.querySelector('.sprite');
+    if (direction !== undefined) sprite.dataset.direction = direction;
+    sprites.push(sprite); target.append(figure);
+  }
+  for (const panel of document.querySelectorAll('.samples')) for (const size of [16,20,32,64,96]) avatar(size,panel,`${size} px`);
+  for (let i=0;i<16;i++) avatar(48,document.querySelector('.directions'),`${i*22.5}°`,i);
+  function render() {
+    const row = states.indexOf(document.querySelector('#state').value);
+    for (const sprite of sprites) {
+      const direction = sprite.dataset.direction;
+      const r = direction === undefined ? row : 9 + Math.floor(Number(direction)/8);
+      const c = direction === undefined ? column : Number(direction)%8;
+      sprite.style.backgroundPosition = `${c/7*100}% ${r/10*100}%`;
+    }
+    document.querySelector('#status').textContent = `第 ${row} 行 · 帧 ${column+1}/${counts[row]} · ${document.querySelector('#reduced').checked?'静止首帧':paused?'已暂停':'持续循环'}`;
+  }
+  function step() {
+    render();
+    if (paused || document.querySelector('#reduced').checked) return;
+    const row = states.indexOf(document.querySelector('#state').value);
+    const duration = row===0 ? [280,110,110,140,140,320][column]*6 : durations[row][column===counts[row]-1?1:0];
+    timer = setTimeout(()=>{column=(column+1)%counts[row];step();},duration);
+  }
+  function restart() { clearTimeout(timer); column=0; if(ready) step(); }
+  document.querySelector('#state').onchange = restart;
+  document.querySelector('#reduced').checked = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelector('#reduced').onchange = restart;
+  document.querySelector('#pause').onclick = () => {paused=!paused;document.querySelector('#pause').textContent=paused?'播放':'暂停';restart();};
+  const image = new Image();
+  image.onload = () => {
+    const canvas = document.createElement('canvas');canvas.width=192;canvas.height=208;
+    const context = canvas.getContext('2d');context.drawImage(image,0,0,192,208,0,0,192,208);
+    const rgba = context.getImageData(0,0,192,208).data;
+    let left=192,top=208,right=0,bottom=0;
+    for(let y=0;y<208;y++)for(let x=0;x<192;x++)if(rgba[(y*192+x)*4+3]){left=Math.min(left,x);top=Math.min(top,y);right=Math.max(right,x+1);bottom=Math.max(bottom,y+1);}
+    bounds={left,top,width:right-left,height:bottom-top};
+    const scale=Math.min(208/Math.max(bounds.width,bounds.height),1.5);
+    const tx=(96-(left+bounds.width/2))/208*scale*100;
+    const ty=(104-(top+bounds.height/2))/208*scale*100;
+    document.querySelectorAll('.position').forEach(element=>element.style.transform=`translate(${tx}%,${ty}%) scale(${scale})`);
+    ready=true;step();
+  };
+  image.onerror = () => document.querySelector('#status').textContent='精灵图加载失败，请保持 assets 与 previews 的目录关系。';
+  image.src='../assets/spritesheet.png';
+</script>
+</html>

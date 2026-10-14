@@ -42,6 +42,14 @@
 
 ## 📦 把澜澜带到桌面
 
+### Codex dot · 大肥鱼
+
+在仓库根目录运行 `./scripts/install-dot.ps1`，将桌宠安装到本机 Codex。进入 Pets 设置选择 **大肥鱼**，再把 dot 形象设为桌宠 / Pet。配置已适配本机 v2 加载格式，保留原有全部动作与十六向注视。
+
+[dot 适配与安装说明](docs/dot-adaptation.md) · [小尺寸 / 深浅背景互动预览](previews/dot-compatibility.html)
+
+### Pets 导入
+
 1. 下载 [透明精灵图](assets/spritesheet.png) 和 [角色配置](pet.json)。
 2. 在支持 v2 格式的 Pets 导入流程中使用精灵图，选择澜澜。
 3. 让她陪你开工！动作会随 Codex 的状态切换，工作时她会抱着笔记本打字。🐋

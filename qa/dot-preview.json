@@ -1,0 +1,50 @@
+{
+  "idleBounds": {
+    "left": 34,
+    "top": 4,
+    "width": 125,
+    "height": 198
+  },
+  "spriteElements": 26,
+  "states": [
+    {
+      "state": "idle",
+      "position": "0% 0%"
+    },
+    {
+      "state": "running",
+      "position": "0% 70%"
+    },
+    {
+      "state": "review",
+      "position": "0% 80%"
+    },
+    {
+      "state": "waiting",
+      "position": "0% 60%"
+    },
+    {
+      "state": "waving",
+      "position": "0% 30%"
+    },
+    {
+      "state": "jumping",
+      "position": "0% 40%"
+    },
+    {
+      "state": "failed",
+      "position": "0% 50%"
+    },
+    {
+      "state": "running-left",
+      "position": "0% 20%"
+    },
+    {
+      "state": "running-right",
+      "position": "0% 10%"
+    }
+  ],
+  "workAfter3500ms": "第 7 行 · 帧 2/6 · 持续循环",
+  "reducedMotionHeldFirstFrame": true,
+  "errors": []
+}

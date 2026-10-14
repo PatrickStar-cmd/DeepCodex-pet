@@ -1,5 +1,8 @@
 {
   "name": "澜澜",
+  "displayName": "大肥鱼",
+  "spriteVersionNumber": 2,
+  "spritesheetPath": "assets/spritesheet.png",
   "description": "蓝发鲸鱼娘，陪伴阅读与思考的工作伙伴。",
   "sprite_version": 2,
   "spritesheet": "assets/spritesheet.png",
