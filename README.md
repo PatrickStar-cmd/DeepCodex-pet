@@ -8,6 +8,8 @@
 
 **v3.1 待机流畅更新：** 晃头改为 **72 帧、24 fps、3 秒循环**，用同一套头部与身体分层素材连续旋转，摆幅约 ±5°。裙摆、双脚和坐姿落点保持不动，六个原生待机槽位显示同一动画相位，切换槽位时不会跳姿态。
 
+**本地与云端的区别：** 上述 24 fps 适用于直接读取本地 APNG 的加载方式。迁移到云端 Pets 后，服务会重新编码 PNG 并去掉 APNG 动画块；dot 使用云端版本时，应更新原有宠物条目为 [云端兼容精灵图](assets/spritesheet-cloud.png)。兼容版使用同一最新形象的六帧轻摆，不能达到本地版的 24 fps；仅重装本地文件不会更新已经迁移的云端角色。
+
 | 🌊 坐姿晃脑袋 | 💻 笔记本工作 | 🤔 抵唇思考 |
 |---|---|---|
 | ![左右歪头待机](previews/seated-idle-v3.gif) | ![坐姿使用笔记本](previews/laptop-work.gif) | ![手指抵唇思考](previews/hover-thinking-v3.gif) |
@@ -45,6 +47,7 @@ cd DeepCodex-pet
 | [assets/spritesheet.png](assets/spritesheet.png) | 当前原生完整精灵图 |
 | [assets/spritesheet-v3.png](assets/spritesheet-v3.png) | v3 同内容版本副本 |
 | [assets/spritesheet-static.png](assets/spritesheet-static.png) | 静态待机兼容版 |
+| [assets/spritesheet-cloud.png](assets/spritesheet-cloud.png) | 云端 Pets 六帧轻摆兼容版 |
 | [pet.json](pet.json) | 角色配置、动作槽位和 SHA-256 |
 | [source/v3/](source/v3/) | ImageGen 原始透明输出和坐姿锚点 |
 | [source/v3-smooth/](source/v3-smooth/) | 晃头分层素材及 72 张连续运动帧 |

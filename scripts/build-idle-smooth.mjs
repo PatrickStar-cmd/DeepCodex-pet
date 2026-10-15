@@ -124,3 +124,4 @@ registration.frames=registration.frames.filter(f=>f.source!=='idle');
 registration.idleOverride={source:'source/v3-smooth/rig-layers.png',scale:.34,bodyYOffset:55,neckPivot:[235,330],fps,frames:count,continuityReport:'qa/idle-smooth/continuity.json'};
 save('qa/v3-registration.json',JSON.stringify(registration,null,2)+'\n');
 console.log(JSON.stringify({...report,angles:undefined},null,2));
+await import('./build-cloud-compat.mjs');

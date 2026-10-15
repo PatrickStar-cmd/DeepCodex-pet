@@ -1,0 +1,17 @@
+{
+  "format": "PNG v2",
+  "width": 1536,
+  "height": 2288,
+  "sourceFrameIndices": [
+    0,
+    2,
+    3,
+    0,
+    69,
+    70
+  ],
+  "amplitudeDegrees": 1.2940952255126037,
+  "nativeIdleSlots": 6,
+  "sha256": "ee998137cdd17898da78128db89697cfd159a56d742721849e5efefca948113b",
+  "reason": "Cloud Pets re-encoding removes embedded APNG animation; native animation must be represented by the six atlas slots."
+}

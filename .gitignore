@@ -5,3 +5,6 @@ __pycache__/
 Thumbs.db
 node_modules/
 *.zip
+/source/revisions/pre-cloud-v31/
+/qa/cloud-v31-stored.*
+/qa/cloud-v31-update.json

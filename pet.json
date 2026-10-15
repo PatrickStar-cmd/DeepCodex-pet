@@ -125,5 +125,7 @@
     "native_idle_slots": 6,
     "synchronization": "identical phase in all native idle slots",
     "reduced_motion": "Install with -StaticIdle; native frame-freeze alone cannot pause an APNG"
-  }
+  },
+  "cloudSpritesheetPath": "assets/spritesheet-cloud.png",
+  "cloudSha256": "ee998137cdd17898da78128db89697cfd159a56d742721849e5efefca948113b"
 }
