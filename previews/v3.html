@@ -78,6 +78,7 @@
   function current() { return (hovering || focused) && select.value === 'idle' ? 4 : names.indexOf(select.value); }
   function draw() {
     const row = current();
+    sprite.style.backgroundImage = `url('../assets/${paused || reduced.checked ? 'spritesheet-static.png' : 'spritesheet-v3.png'}')`;
     sprite.style.backgroundPosition = `${-column*192}px ${-row*208}px`;
     sprite.dataset.row = row; sprite.dataset.frame = column;
     document.querySelector('#status').textContent = `${labels[row]}${paused?' · 已暂停':reduced.checked?' · 静止首帧':' · 循环播放'}`;

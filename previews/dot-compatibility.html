@@ -65,6 +65,7 @@
       const r = direction === undefined ? row : 9 + Math.floor(Number(direction)/8);
       const c = direction === undefined ? column : Number(direction)%8;
       sprite.style.backgroundPosition = `${c/7*100}% ${r/10*100}%`;
+      sprite.style.backgroundImage = `url('../assets/${paused || document.querySelector('#reduced').checked ? 'spritesheet-static.png' : 'spritesheet.png'}')`;
     }
     document.querySelector('#status').textContent = `第 ${row} 行 · 帧 ${column+1}/${counts[row]} · ${document.querySelector('#reduced').checked?'静止首帧':paused?'已暂停':'持续循环'}`;
   }

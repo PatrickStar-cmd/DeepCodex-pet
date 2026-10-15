@@ -1,104 +1,8 @@
 {
-  "asset_revision": "seated-v3",
+  "asset_revision": "seated-v3-smooth-idle",
   "baseline": 203,
   "method": "One scale per generated sheet; shared seated contact baseline; no per-frame independent scaling.",
   "frames": [
-    {
-      "source": "idle",
-      "index": 0,
-      "scale": 0.3811563169164882,
-      "width": 171,
-      "height": 183,
-      "baseline": 203,
-      "sourceBounds": {
-        "left": 38,
-        "top": 14,
-        "width": 449,
-        "height": 480,
-        "bottom": 494,
-        "pixels": 143842
-      }
-    },
-    {
-      "source": "idle",
-      "index": 1,
-      "scale": 0.3811563169164882,
-      "width": 170,
-      "height": 183,
-      "baseline": 203,
-      "sourceBounds": {
-        "left": 37,
-        "top": 15,
-        "width": 447,
-        "height": 480,
-        "bottom": 495,
-        "pixels": 145044
-      }
-    },
-    {
-      "source": "idle",
-      "index": 2,
-      "scale": 0.3811563169164882,
-      "width": 168,
-      "height": 183,
-      "baseline": 203,
-      "sourceBounds": {
-        "left": 48,
-        "top": 15,
-        "width": 442,
-        "height": 479,
-        "bottom": 494,
-        "pixels": 143288
-      }
-    },
-    {
-      "source": "idle",
-      "index": 3,
-      "scale": 0.3811563169164882,
-      "width": 171,
-      "height": 183,
-      "baseline": 203,
-      "sourceBounds": {
-        "left": 38,
-        "top": 11,
-        "width": 448,
-        "height": 479,
-        "bottom": 490,
-        "pixels": 143704
-      }
-    },
-    {
-      "source": "idle",
-      "index": 4,
-      "scale": 0.3811563169164882,
-      "width": 178,
-      "height": 183,
-      "baseline": 203,
-      "sourceBounds": {
-        "left": 35,
-        "top": 10,
-        "width": 467,
-        "height": 481,
-        "bottom": 491,
-        "pixels": 147401
-      }
-    },
-    {
-      "source": "idle",
-      "index": 5,
-      "scale": 0.3811563169164882,
-      "width": 170,
-      "height": 182,
-      "baseline": 203,
-      "sourceBounds": {
-        "left": 50,
-        "top": 12,
-        "width": 446,
-        "height": 478,
-        "bottom": 490,
-        "pixels": 144718
-      }
-    },
     {
       "source": "work",
       "index": 0,
@@ -739,5 +643,17 @@
         "pixels": 148991
       }
     }
-  ]
+  ],
+  "idleOverride": {
+    "source": "source/v3-smooth/rig-layers.png",
+    "scale": 0.34,
+    "bodyYOffset": 55,
+    "neckPivot": [
+      235,
+      330
+    ],
+    "fps": 24,
+    "frames": 72,
+    "continuityReport": "qa/idle-smooth/continuity.json"
+  }
 }

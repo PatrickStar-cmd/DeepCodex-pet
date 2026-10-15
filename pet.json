@@ -12,13 +12,13 @@
   "cell_height": 208,
   "columns": 8,
   "rows": 11,
-  "sha256": "f82c04987748d15880f6a56fefff44b3519a8fd5ce4f4d4383fa17f617d4e630",
+  "sha256": "eb39ece64f78d6859238d3fcbeaafb8a62aff1eaaecc0dc83bcb4c54c73826bd",
   "states": [
     {
       "row": 0,
       "name": "idle",
       "frames": 6,
-      "visual_action": "seated-rhythmic-head-sway"
+      "visual_action": "seated-continuous-head-sway"
     },
     {
       "row": 1,
@@ -97,9 +97,9 @@
     "angle_rotation": "clockwise"
   },
   "active_work_action": "sitting and typing on a laptop",
-  "asset_revision": "seated-v3",
+  "asset_revision": "seated-v3-smooth-idle",
   "enhanced_actions": {
-    "idle": "seated-rhythmic-head-sway",
+    "idle": "24 fps continuous head rotation around neck; planted seated body",
     "running-right": "seated-moving-right",
     "running-left": "seated-moving-left",
     "waving": "seated-friendly-wave",
@@ -109,9 +109,21 @@
     "running": "seated-laptop-typing",
     "review": "seated-laptop-review"
   },
-  "product_version": "3.0",
+  "product_version": "3.1",
   "pointer_interaction": {
     "button_hover": "jumping slot (row 4)",
     "dot_idle_pointer": "16 seated finger-to-lips directional frames (rows 9 and 10)"
+  },
+  "staticSpritesheetPath": "assets/spritesheet-static.png",
+  "staticSha256": "856d1ed0f2bd9bf4921a15518dc8272a74bfb5b144b2d981e7c2c38e7fe96fa8",
+  "embedded_idle_animation": {
+    "format": "apng",
+    "frames": 72,
+    "fps": 24,
+    "duration_ms": 3000,
+    "amplitude_degrees": 5,
+    "native_idle_slots": 6,
+    "synchronization": "identical phase in all native idle slots",
+    "reduced_motion": "Install with -StaticIdle; native frame-freeze alone cannot pause an APNG"
   }
 }

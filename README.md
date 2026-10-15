@@ -6,6 +6,8 @@
 
 **v3 · 2026-10-15 更新：** 全部动作统一为圆润的 Q 版坐姿，配色为靛蓝到青蓝的长发、蓝白女仆裙和小鲸尾，保持一致的头身比例。待机时轻轻左右歪头，工作时把笔记本放在腿上；鼠标互动时，露出手指抵唇、圆嘴、大眼睛和小问号的思考表情。
 
+**v3.1 待机流畅更新：** 晃头改为 **72 帧、24 fps、3 秒循环**，用同一套头部与身体分层素材连续旋转，摆幅约 ±5°。裙摆、双脚和坐姿落点保持不动，六个原生待机槽位显示同一动画相位，切换槽位时不会跳姿态。
+
 | 🌊 坐姿晃脑袋 | 💻 笔记本工作 | 🤔 抵唇思考 |
 |---|---|---|
 | ![左右歪头待机](previews/seated-idle-v3.gif) | ![坐姿使用笔记本](previews/laptop-work.gif) | ![手指抵唇思考](previews/hover-thinking-v3.gif) |
@@ -28,6 +30,8 @@ cd DeepCodex-pet
 
 已经克隆仓库的用户，更新后在仓库根目录重新运行 `./scripts/install-dot.ps1` 即可。
 
+默认安装包含连续晃头的 APNG 精灵图。需要静态待机时运行 `./scripts/install-dot.ps1 -StaticIdle`：客户端自身的“减少动态效果”只能冻结动作槽位，无法暂停 PNG 文件内部的动画。静态版保留工作、悬停等动作供客户端调度。
+
 安装名称为 **大肥鱼**，稳定 ID 为 `custom:deepcodex-lanlan`。更新时自动备份旧素材，已选择该角色时沿用原 ID。若界面仍显示旧素材，重新进入 Pets 设置选择大肥鱼，必要时重新打开客户端。
 
 首次使用：在 Codex Pets 设置选择大肥鱼，再将 dot 形象设为桌宠 / Pet。任务栏位置由 Codex 的 dot 布局控制；本仓库负责角色坐姿和动作素材。
@@ -40,8 +44,10 @@ cd DeepCodex-pet
 |---|---|
 | [assets/spritesheet.png](assets/spritesheet.png) | 当前原生完整精灵图 |
 | [assets/spritesheet-v3.png](assets/spritesheet-v3.png) | v3 同内容版本副本 |
+| [assets/spritesheet-static.png](assets/spritesheet-static.png) | 静态待机兼容版 |
 | [pet.json](pet.json) | 角色配置、动作槽位和 SHA-256 |
 | [source/v3/](source/v3/) | ImageGen 原始透明输出和坐姿锚点 |
+| [source/v3-smooth/](source/v3-smooth/) | 晃头分层素材及 72 张连续运动帧 |
 | [source/frames/](source/frames/) | 当前 57 张动作帧和 16 张注视帧 |
 | [prompts/v3/](prompts/v3/) | 生成与修正提示词 |
 | [qa/v3-registration.json](qa/v3-registration.json) | 统一缩放和坐姿基线记录 |
@@ -67,7 +73,9 @@ v3 是角色素材版本；原生文件继续使用客户端支持的 **sprite v
 | 8 | `review` | 6 | 笔记本注视、轻点头和眨眼 |
 | 9 / 10 | 鼠标注视 | 16 | 思考表情，顺时针十六向注视 |
 
-动画速度沿用客户端：待机一轮 6.6 秒，工作一轮 0.82 秒。GIF 和互动预览使用对应时长。角色画面由内置 ImageGen 生成，再分帧、清理透明噪点、对齐和打包。
+v3.1 的待机连续动画独立于客户端的六帧槽位时钟，一轮为 3 秒；工作沿用客户端时长，一轮 0.82 秒。GIF 与互动预览展示同一套连续运动帧。角色与头身分层素材由内置 ImageGen 生成，再完成旋转动画渲染、透明边缘清理和打包。
+
+详见 [待机流畅更新说明](docs/idle-smooth-update.md)。
 
 ## 验证状态
 

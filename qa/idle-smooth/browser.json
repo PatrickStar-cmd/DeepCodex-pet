@@ -1,0 +1,14 @@
+{
+  "valid": true,
+  "uniqueFramesObserved": 28,
+  "samples": 40,
+  "elapsedMs": 4064.0339,
+  "allSixNativeSlotsSamePhase": true,
+  "plantedBodyStable": true,
+  "workPixelsStable": true,
+  "staticVariantStable": true,
+  "maxObservedSampleDifference": 5.359324919871795,
+  "edgeWorkingSetDeltaMB": 222.578125,
+  "errors": [],
+  "scope": "Real-time headless Edge CSS-background rendering through the same PNG data-URL path used by the inspected native loader; not a live Codex UI capture."
+}

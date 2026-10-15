@@ -1,0 +1,117 @@
+{
+  "name": "澜澜",
+  "displayName": "大肥鱼",
+  "spriteVersionNumber": 2,
+  "spritesheetPath": "assets/spritesheet.png",
+  "description": "v3 坐姿蓝发鲸鱼娘：待机左右晃脑袋，工作使用笔记本，悬停手指抵唇思考。",
+  "sprite_version": 2,
+  "spritesheet": "assets/spritesheet.png",
+  "width": 1536,
+  "height": 2288,
+  "cell_width": 192,
+  "cell_height": 208,
+  "columns": 8,
+  "rows": 11,
+  "sha256": "f82c04987748d15880f6a56fefff44b3519a8fd5ce4f4d4383fa17f617d4e630",
+  "states": [
+    {
+      "row": 0,
+      "name": "idle",
+      "frames": 6,
+      "visual_action": "seated-rhythmic-head-sway"
+    },
+    {
+      "row": 1,
+      "name": "running-right",
+      "frames": 8,
+      "visual_action": "seated-moving-right"
+    },
+    {
+      "row": 2,
+      "name": "running-left",
+      "frames": 8,
+      "visual_action": "seated-moving-left"
+    },
+    {
+      "row": 3,
+      "name": "waving",
+      "frames": 4,
+      "visual_action": "seated-friendly-wave"
+    },
+    {
+      "row": 4,
+      "name": "jumping",
+      "frames": 5,
+      "visual_action": "seated-finger-to-lips-curious"
+    },
+    {
+      "row": 5,
+      "name": "failed",
+      "frames": 8,
+      "visual_action": "seated-small-disappointment"
+    },
+    {
+      "row": 6,
+      "name": "waiting",
+      "frames": 6,
+      "visual_action": "seated-open-palms-waiting"
+    },
+    {
+      "row": 7,
+      "name": "running",
+      "frames": 6,
+      "visual_action": "seated-laptop-typing"
+    },
+    {
+      "row": 8,
+      "name": "review",
+      "frames": 6,
+      "visual_action": "seated-laptop-review"
+    }
+  ],
+  "look": {
+    "rows": [
+      9,
+      10
+    ],
+    "frames_per_row": 8,
+    "angles_degrees": [
+      0,
+      22.5,
+      45,
+      67.5,
+      90,
+      112.5,
+      135,
+      157.5,
+      180,
+      202.5,
+      225,
+      247.5,
+      270,
+      292.5,
+      315,
+      337.5
+    ],
+    "angle_origin": "up",
+    "angle_rotation": "clockwise"
+  },
+  "active_work_action": "sitting and typing on a laptop",
+  "asset_revision": "seated-v3",
+  "enhanced_actions": {
+    "idle": "seated-rhythmic-head-sway",
+    "running-right": "seated-moving-right",
+    "running-left": "seated-moving-left",
+    "waving": "seated-friendly-wave",
+    "jumping": "seated-finger-to-lips-curious",
+    "failed": "seated-small-disappointment",
+    "waiting": "seated-open-palms-waiting",
+    "running": "seated-laptop-typing",
+    "review": "seated-laptop-review"
+  },
+  "product_version": "3.0",
+  "pointer_interaction": {
+    "button_hover": "jumping slot (row 4)",
+    "dot_idle_pointer": "16 seated finger-to-lips directional frames (rows 9 and 10)"
+  }
+}

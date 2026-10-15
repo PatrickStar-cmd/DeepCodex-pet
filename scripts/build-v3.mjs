@@ -149,3 +149,4 @@ await sharp({ create: { width: W * 6, height: H, channels: 4, background: '#edf3
 const contacts = rows.flatMap((s, row) => s.frames.map((input, col) => ({ input, left: col * W, top: row * H })));
 await sharp({ create: { width: W * 8, height: H * 11, channels: 4, background: '#edf3fc' } }).composite(contacts).png().toFile(at('previews/contact-sheet-extended.png'));
 console.log(JSON.stringify({ version: pet.product_version, sha256: pet.sha256, actionFrames: 57, lookFrames: 16, baseline, sprite: pet.spritesheetPath }));
+if (fs.existsSync(at('source/v3-smooth/rig-layers.png'))) await import('./build-idle-smooth.mjs');

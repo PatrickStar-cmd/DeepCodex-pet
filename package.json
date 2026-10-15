@@ -4,9 +4,11 @@
   "type": "module",
   "scripts": {
     "build:v3": "node scripts/build-v3.mjs",
+    "build:idle": "node scripts/build-idle-smooth.mjs",
     "validate": "node scripts/validate-dot.mjs"
   },
   "devDependencies": {
-    "sharp": "0.35.5"
+    "sharp": "0.35.5",
+    "@napi-rs/canvas": "0.1.100"
   }
 }

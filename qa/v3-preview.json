@@ -49,5 +49,12 @@
   },
   "mobileOverflow": false,
   "errors": [],
-  "scope": "Headless Edge preview-page checks; does not claim live Codex UI verification."
+  "scope": "Headless Edge preview-page checks; does not claim live Codex UI verification.",
+  "smoothIdle": {
+    "frames": 72,
+    "fps": 24,
+    "reducedMotionSelectsStaticFile": true,
+    "pauseSelectsStaticFile": true,
+    "animatedFileRestored": true
+  }
 }
