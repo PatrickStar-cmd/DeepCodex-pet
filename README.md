@@ -10,6 +10,8 @@
 
 **本地与云端的区别：** 上述 24 fps 适用于直接读取本地 APNG 的加载方式。迁移到云端 Pets 后，服务会重新编码 PNG 并去掉 APNG 动画块；dot 使用云端版本时，应更新原有宠物条目为 [云端兼容精灵图](assets/spritesheet-cloud.png)。兼容版使用同一最新形象的六帧轻摆，不能达到本地版的 24 fps；仅重装本地文件不会更新已经迁移的云端角色。
 
+动态 WebP 也已验证会被云端转为静态 PNG。当前继续保留原生 dot 六帧兼容版，卡顿尚未解决；验证结果见[播放限制说明](docs/cloud-dot-update.md#原生-dot-的流畅度限制)。
+
 [本次更新记录](CHANGELOG.md) · [云端 dot 替换说明](docs/cloud-dot-update.md)
 
 | 🌊 本地 24 fps 晃脑袋 | 💻 笔记本工作 | 🤔 抵唇思考 |

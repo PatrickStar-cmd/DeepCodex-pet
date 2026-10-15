@@ -1,0 +1,19 @@
+{
+  "verifiedOn": "2026-10-15",
+  "clientVersion": "26.1007.9446.0",
+  "mime": "image/png",
+  "bytes": 4894919,
+  "animationFrames": 0,
+  "chunks": [
+    "IHDR",
+    "IDAT",
+    "IEND"
+  ],
+  "preservesAnimation": false,
+  "localProbeFrames": 72,
+  "localProbeRenderedStates": 18,
+  "localProbeSamples": 20,
+  "compatibleVersionRestored": true,
+  "restorePixelsEqual": true,
+  "userPreference": "Keep native dot; retain the current compatible artwork"
+}

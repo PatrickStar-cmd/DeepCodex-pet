@@ -8,3 +8,5 @@ node_modules/
 /source/revisions/pre-cloud-v31/
 /qa/cloud-v31-stored.*
 /qa/cloud-v31-update.json
+/qa/idle-smooth/animated-webp-probe.webp
+/qa/idle-smooth/webp-cloud-readback.bin
