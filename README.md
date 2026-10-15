@@ -1,4 +1,4 @@
-# 🐋 DeepCodex Pet · 大肥鱼 v3
+# 🐋 DeepCodex Pet · 大肥鱼 v3.1
 
 一只用于 Codex dot 的蓝发鲸鱼娘桌宠，原名澜澜。坐在任务栏上方，晃晃脑袋，陪你一起开工。💙
 
@@ -10,7 +10,9 @@
 
 **本地与云端的区别：** 上述 24 fps 适用于直接读取本地 APNG 的加载方式。迁移到云端 Pets 后，服务会重新编码 PNG 并去掉 APNG 动画块；dot 使用云端版本时，应更新原有宠物条目为 [云端兼容精灵图](assets/spritesheet-cloud.png)。兼容版使用同一最新形象的六帧轻摆，不能达到本地版的 24 fps；仅重装本地文件不会更新已经迁移的云端角色。
 
-| 🌊 坐姿晃脑袋 | 💻 笔记本工作 | 🤔 抵唇思考 |
+[本次更新记录](CHANGELOG.md) · [云端 dot 替换说明](docs/cloud-dot-update.md)
+
+| 🌊 本地 24 fps 晃脑袋 | 💻 笔记本工作 | 🤔 抵唇思考 |
 |---|---|---|
 | ![左右歪头待机](previews/seated-idle-v3.gif) | ![坐姿使用笔记本](previews/laptop-work.gif) | ![手指抵唇思考](previews/hover-thinking-v3.gif) |
 | 👋 微笑挥手 | 🙌 等待回应 | 🥺 小小失落 |
@@ -19,6 +21,26 @@
 [任务栏互动预览](previews/v3.html) · [深浅背景与小尺寸检查](previews/dot-compatibility.html) · [动作切换 GIF](previews/v3-transition.gif) · [完整动作巡览](previews/all-states.gif)
 
 GitHub 首页可直接查看 GIF；互动 HTML 预览需下载仓库后在本地打开。小尺寸检查页建议通过本地 HTTP 服务访问。
+
+## 版本选择
+
+| 使用方式 | 素材 | 待机表现 |
+|---|---|---|
+| 直接读取本地文件的桌宠 | [spritesheet.png](assets/spritesheet.png) | 72 帧、24 fps、3 秒循环，±5° 晃头 |
+| 云端 Pets / 已迁移的 dot 角色 | [spritesheet-cloud.png](assets/spritesheet-cloud.png) | 六帧轻摆，约 ±1.29°，沿用客户端播放节奏 |
+| 需要静态待机 | [spritesheet-static.png](assets/spritesheet-static.png) | 待机保持坐姿，其他动作由客户端调度 |
+
+云端兼容版的实际待机预览：
+
+![云端 dot 六帧轻摆兼容预览](previews/idle-cloud-compatible.gif)
+
+### 替换 dot 中原有的大肥鱼
+
+如果原有角色已经迁移到云端，请使用 Pets 更新能力将 `assets/spritesheet-cloud.png` 替换到**现有“大肥鱼”条目**，保留原 ID，再激活同一条目，并将 dot 形象设为桌宠 / Pet。更新流程和回读检查见[云端 dot 替换说明](docs/cloud-dot-update.md)。
+
+可直接向支持 Pets 工具的助手提出：
+
+> 请用仓库中的 assets/spritesheet-cloud.png 更新已有的“大肥鱼”，保留原 ID 并激活，让 dot 使用这个最新坐姿版本。
 
 ## 安装到本机 Codex（Windows）
 
@@ -61,6 +83,8 @@ npm install
 npm run build:v3
 npm run validate
 ```
+
+仅重建云端兼容素材：`npm run build:cloud`。仅重建本地连续晃头及其兼容素材：`npm run build:idle`。
 
 v3 是角色素材版本；原生文件继续使用客户端支持的 **sprite v2** 格式：1536 × 2288 RGBA PNG，8 列 × 11 行，每格 192 × 208。有效槽位 73 个，空白槽位 15 个。构建按每套生成图使用一个统一缩放比例，并将坐姿落点统一到单元格 y=203。
 
