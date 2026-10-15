@@ -109,7 +109,7 @@
     "running": "seated-laptop-typing",
     "review": "seated-laptop-review"
   },
-  "product_version": "3.1",
+  "product_version": "3.2",
   "pointer_interaction": {
     "button_hover": "jumping slot (row 4)",
     "dot_idle_pointer": "16 seated finger-to-lips directional frames (rows 9 and 10)"
@@ -127,5 +127,27 @@
     "reduced_motion": "Install with -StaticIdle; native frame-freeze alone cannot pause an APNG"
   },
   "cloudSpritesheetPath": "assets/spritesheet-cloud.png",
-  "cloudSha256": "ee998137cdd17898da78128db89697cfd159a56d742721849e5efefca948113b"
+  "cloudSha256": "d177748e1e94fd4627fb529d4ff1aaa5aeff1d477be01b96665fdec5ac543c38",
+  "cloud_idle_animation": {
+    "action": "seated-two-state-blink",
+    "states": [
+      "open",
+      "closed",
+      "open",
+      "open",
+      "open",
+      "open"
+    ],
+    "nativeDelaysMs": [
+      1680,
+      660,
+      660,
+      840,
+      840,
+      1920
+    ],
+    "intermediateEyeStates": 0,
+    "headSway": false
+  },
+  "avatarPath": "assets/avatar-v3.png"
 }

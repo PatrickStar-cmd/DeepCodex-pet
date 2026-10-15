@@ -2,9 +2,9 @@
 
 2026-10-15。优先解决待机晃头的跳帧感。
 
-> 云端兼容核查：直接读取本地文件时可保留 APNG；Pets 云端上传后会重新编码为仅含 IHDR / IDAT / IEND 的静态 PNG，去掉内嵌 72 帧。云端 dot 使用 `assets/spritesheet-cloud.png` 的六帧轻摆兼容版，无法达到本地版的 24 fps。已回读云端文件并确认六帧兼容版的解码像素与上传原图完全一致。更新云端时保留原宠物 ID，再激活同一条目。
+> 云端兼容核查：直接读取本地文件时可保留 APNG；Pets 云端上传后会重新编码为仅含 IHDR / IDAT / IEND 的静态 PNG，去掉内嵌 72 帧。云端使用 `assets/spritesheet-cloud.png`，v3.1 为六帧轻摆，v3.2 改为两态眨眼，均无法达到本地版的 24 fps。更新云端时保留原宠物 ID，再激活同一条目；dot 资料卡头像快照仍需在形象编辑中另行保存。
 
-后续动态 WebP 测试同样被云端转成静态 PNG，未解决原生 dot 卡顿。测试素材已撤回，继续使用六帧兼容版，暂不改为独立桌宠。完整验证与播放时长见[云端 dot 流畅度限制](cloud-dot-update.md#原生-dot-的流畅度限制)。
+后续动态 WebP 测试同样被云端转成静态 PNG，未解决原生 dot 卡顿。v3.2 云端兼容版已改为头身固定的睁眼 / 闭眼两态眨眼，继续使用六个原生槽位，暂不改为独立桌宠。完整验证与播放时长见[云端 dot 流畅度限制](cloud-dot-update.md#原生-dot-的流畅度限制)。
 
 原版使用六张独立绘制的姿态，客户端每张停留 660～1920 ms，一轮 6.6 秒；脸部和头发的绘制差异也会随姿态切换而跳变。增加独立生成的姿态数量无法改变客户端固定读取六个槽位的规则。
 
@@ -35,7 +35,7 @@ npm run build:idle
 npm run validate
 ```
 
-单独重建云端六帧兼容素材可运行 `npm run build:cloud`。它从已生成的 72 帧中取轻摆姿态，未重新绘制角色。`build:idle` 会同时生成云端兼容版。
+单独重建云端兼容素材可运行 `npm run build:cloud`。v3.2 使用中立坐姿与 ImageGen 闭眼区域，组合成两态眨眼。`build:idle` 会同时生成云端兼容版。
 
 `build:v3` 也会在完成其他动作打包后自动重建连续晃头版本。浏览器 QA 使用可选的 Playwright 与本机 Microsoft Edge，运行 `node scripts/verify-idle-smooth.mjs`。
 

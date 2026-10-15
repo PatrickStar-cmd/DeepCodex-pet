@@ -1,6 +1,6 @@
-# 🐋 DeepCodex Pet · 大肥鱼 v3.1
+# 🐋 DeepCodex Pet · 大肥鱼 v3.2
 
-一只用于 Codex dot 的蓝发鲸鱼娘桌宠，原名澜澜。坐在任务栏上方，晃晃脑袋，陪你一起开工。💙
+一只用于 Codex dot 的蓝发鲸鱼娘桌宠，原名澜澜。坐在任务栏上方，眨眨眼，陪你一起开工。💙
 
 ![v3 坐姿、左右歪头、笔记本与思考表情](previews/seated-v3-stills.png)
 
@@ -8,9 +8,13 @@
 
 **v3.1 待机流畅更新：** 晃头改为 **72 帧、24 fps、3 秒循环**，用同一套头部与身体分层素材连续旋转，摆幅约 ±5°。裙摆、双脚和坐姿落点保持不动，六个原生待机槽位显示同一动画相位，切换槽位时不会跳姿态。
 
-**本地与云端的区别：** 上述 24 fps 适用于直接读取本地 APNG 的加载方式。迁移到云端 Pets 后，服务会重新编码 PNG 并去掉 APNG 动画块；dot 使用云端版本时，应更新原有宠物条目为 [云端兼容精灵图](assets/spritesheet-cloud.png)。兼容版使用同一最新形象的六帧轻摆，不能达到本地版的 24 fps；仅重装本地文件不会更新已经迁移的云端角色。
+**本地与云端的区别：** 上述 24 fps 适用于直接读取本地 APNG 的加载方式。迁移到云端 Pets 后，服务会重新编码 PNG 并去掉 APNG 动画块；dot 使用云端版本时，应更新原有宠物条目为 [云端兼容精灵图](assets/spritesheet-cloud.png)。当前兼容版使用同一最新形象的两态眨眼，不能达到本地版的 24 fps；仅重装本地文件不会更新已经迁移的云端角色。
 
-动态 WebP 也已验证会被云端转为静态 PNG。当前继续保留原生 dot 六帧兼容版，卡顿尚未解决；验证结果见[播放限制说明](docs/cloud-dot-update.md#原生-dot-的流畅度限制)。
+**v3.2 云端待机：** 保留 v3 坐姿，将云端晃头改成**睁眼 / 闭眼两态眨眼**，不使用中间态。头部和身体固定，六个槽位重复两张图，避免低帧率下晃头跳变。动态 WebP 也会被云端转为静态 PNG，因此仍沿用原生播放时长；详见[播放限制说明](docs/cloud-dot-update.md#原生-dot-的流畅度限制)。
+
+![v3 云端睁眼、闭眼、睁眼、保持坐姿](previews/cloud-blink-stills.png)
+
+**dot 资料卡仍显示旧站姿时：** Pets 图集和 dot 保存的头像快照是两份内容。更新、激活宠物后，还需在 dot 的形象编辑中重新选择“大肥鱼”并保存，生成 v3 坐姿快照。仅更新 Pets 或重启客户端不能证明资料卡头像已经替换。见[头像快照说明](docs/dot-avatar-snapshot.md)。
 
 [本次更新记录](CHANGELOG.md) · [云端 dot 替换说明](docs/cloud-dot-update.md)
 
@@ -29,20 +33,20 @@ GitHub 首页可直接查看 GIF；互动 HTML 预览需下载仓库后在本地
 | 使用方式 | 素材 | 待机表现 |
 |---|---|---|
 | 直接读取本地文件的桌宠 | [spritesheet.png](assets/spritesheet.png) | 72 帧、24 fps、3 秒循环，±5° 晃头 |
-| 云端 Pets / 已迁移的 dot 角色 | [spritesheet-cloud.png](assets/spritesheet-cloud.png) | 六帧轻摆，约 ±1.29°，沿用客户端播放节奏 |
+| 云端 Pets / 已迁移的 dot 角色 | [spritesheet-cloud.png](assets/spritesheet-cloud.png) | 两态眨眼，头身固定，沿用客户端六槽位节奏 |
 | 需要静态待机 | [spritesheet-static.png](assets/spritesheet-static.png) | 待机保持坐姿，其他动作由客户端调度 |
 
 云端兼容版的实际待机预览：
 
-![云端 dot 六帧轻摆兼容预览](previews/idle-cloud-compatible.gif)
+![云端两态眨眼兼容预览](previews/idle-cloud-compatible.gif)
 
 ### 替换 dot 中原有的大肥鱼
 
-如果原有角色已经迁移到云端，请使用 Pets 更新能力将 `assets/spritesheet-cloud.png` 替换到**现有“大肥鱼”条目**，保留原 ID，再激活同一条目，并将 dot 形象设为桌宠 / Pet。更新流程和回读检查见[云端 dot 替换说明](docs/cloud-dot-update.md)。
+如果原有角色已经迁移到云端，请使用 Pets 更新能力将 `assets/spritesheet-cloud.png` 替换到**现有“大肥鱼”条目**，保留原 ID，再激活同一条目。随后在 dot 的形象编辑中重新选择桌宠“大肥鱼”并保存头像快照。更新流程和回读检查见[云端 dot 替换说明](docs/cloud-dot-update.md)。
 
 可直接向支持 Pets 工具的助手提出：
 
-> 请用仓库中的 assets/spritesheet-cloud.png 更新已有的“大肥鱼”，保留原 ID 并激活，让 dot 使用这个最新坐姿版本。
+> 请用仓库中的 assets/spritesheet-cloud.png 更新已有的“大肥鱼”，保留原 ID 并激活。请区分 Pets 图集更新与 dot 头像快照保存；若工具不能保存快照，请说明还需在形象编辑中操作。
 
 ## 安装到本机 Codex（Windows）
 
@@ -58,6 +62,8 @@ cd DeepCodex-pet
 
 默认安装包含连续晃头的 APNG 精灵图。需要静态待机时运行 `./scripts/install-dot.ps1 -StaticIdle`：客户端自身的“减少动态效果”只能冻结动作槽位，无法暂停 PNG 文件内部的动画。静态版保留工作、悬停等动作供客户端调度。
 
+需要与云端一致的两态眨眼素材时，运行 `./scripts/install-dot.ps1 -CloudIdle`。此参数更新本地图集；dot 的云端头像快照仍需在形象编辑中保存。
+
 安装名称为 **大肥鱼**，稳定 ID 为 `custom:deepcodex-lanlan`。更新时自动备份旧素材，已选择该角色时沿用原 ID。若界面仍显示旧素材，重新进入 Pets 设置选择大肥鱼，必要时重新打开客户端。
 
 首次使用：在 Codex Pets 设置选择大肥鱼，再将 dot 形象设为桌宠 / Pet。任务栏位置由 Codex 的 dot 布局控制；本仓库负责角色坐姿和动作素材。
@@ -71,7 +77,8 @@ cd DeepCodex-pet
 | [assets/spritesheet.png](assets/spritesheet.png) | 当前原生完整精灵图 |
 | [assets/spritesheet-v3.png](assets/spritesheet-v3.png) | v3 同内容版本副本 |
 | [assets/spritesheet-static.png](assets/spritesheet-static.png) | 静态待机兼容版 |
-| [assets/spritesheet-cloud.png](assets/spritesheet-cloud.png) | 云端 Pets 六帧轻摆兼容版 |
+| [assets/spritesheet-cloud.png](assets/spritesheet-cloud.png) | 云端 Pets 两态眨眼兼容版 |
+| [assets/avatar-v3.png](assets/avatar-v3.png) | v3 坐姿静态头像参考 |
 | [pet.json](pet.json) | 角色配置、动作槽位和 SHA-256 |
 | [source/v3/](source/v3/) | ImageGen 原始透明输出和坐姿锚点 |
 | [source/v3-smooth/](source/v3-smooth/) | 晃头分层素材及 72 张连续运动帧 |

@@ -2,9 +2,11 @@
 [CmdletBinding()]
 param(
     [string]$CodexHome = $(if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $env:USERPROFILE '.codex' }),
-    [switch]$StaticIdle
+    [switch]$StaticIdle,
+    [switch]$CloudIdle
 )
 $ErrorActionPreference = 'Stop'
+if ($StaticIdle -and $CloudIdle) { throw 'Choose either -StaticIdle or -CloudIdle.' }
 $repoRoot = Split-Path $PSScriptRoot -Parent
 $manifestPath = Join-Path $repoRoot 'pet.json'
 $manifest = Get-Content -LiteralPath $manifestPath -Raw -Encoding UTF8 | ConvertFrom-Json
@@ -19,6 +21,13 @@ if ($StaticIdle) {
     }
     $selectedSpritePath = $manifest.staticSpritesheetPath
     $selectedSha256 = $manifest.staticSha256
+}
+if ($CloudIdle) {
+    if ([string]::IsNullOrWhiteSpace($manifest.cloudSpritesheetPath) -or [string]::IsNullOrWhiteSpace($manifest.cloudSha256)) {
+        throw 'This package has no cloud-idle variant.'
+    }
+    $selectedSpritePath = $manifest.cloudSpritesheetPath
+    $selectedSha256 = $manifest.cloudSha256
 }
 $spritePath = Join-Path $repoRoot $selectedSpritePath
 $spriteBytes = [IO.File]::ReadAllBytes($spritePath)
@@ -47,7 +56,7 @@ New-Item -ItemType Directory -Path (Join-Path $petDirectory 'assets') -Force | O
 Copy-Item -LiteralPath $spritePath -Destination (Join-Path $petDirectory 'assets/spritesheet.png') -Force
 $nativeManifest = [ordered]@{
     displayName = $manifest.displayName
-    description = $manifest.description
+    description = $(if ($CloudIdle) { 'v3 坐姿蓝发鲸鱼娘：待机两态眨眼，工作使用笔记本，悬停手指抵唇思考。' } else { $manifest.description })
     spriteVersionNumber = $manifest.spriteVersionNumber
     spritesheetPath = $manifest.spritesheetPath
 }
@@ -58,7 +67,7 @@ if ($stored.displayName -ne $manifest.displayName -or (Get-FileHash -LiteralPath
     throw 'Installed pet verification failed.'
 }
 Write-Output "Installed: $($stored.displayName)"
-Write-Output "Idle animation: $(if ($StaticIdle) { 'Static compatibility' } else { 'Smooth APNG when provided by this package' })"
+Write-Output "Idle animation: $(if ($StaticIdle) { 'Static compatibility' } elseif ($CloudIdle) { 'Native two-state blink' } else { 'Smooth APNG when provided by this package' })"
 Write-Output "Pet ID: custom:deepcodex-lanlan"
 Write-Output "Directory: $petDirectory"
 Write-Output 'Choose this pet in Codex Pets settings, then choose Pet for the dot appearance.'

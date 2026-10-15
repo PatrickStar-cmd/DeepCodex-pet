@@ -11,12 +11,13 @@ const check = (ok, message) => { if (!ok) throw new Error(message); };
 check(typeof pet.displayName === 'string' && pet.displayName.trim(), 'Native displayName is missing');
 check(pet.spriteVersionNumber === 2 && pet.sprite_version === 2, 'Both format versions must be 2');
 check(pet.spritesheetPath === pet.spritesheet, 'Native and project sprite paths differ');
-const spritePath = path.resolve(root, pet.spritesheetPath);
+const cloud = process.argv.includes('--cloud');
+const spritePath = path.resolve(root, cloud ? pet.cloudSpritesheetPath : pet.spritesheetPath);
 check(spritePath.startsWith(root + path.sep), 'Sprite path escapes the package');
 const png = fs.readFileSync(spritePath);
 check(png.subarray(0, 8).equals(Buffer.from('89504e470d0a1a0a', 'hex')), 'Expected PNG');
 const sha256 = crypto.createHash('sha256').update(png).digest('hex');
-check(sha256 === pet.sha256, 'Sprite hash differs from manifest');
+check(sha256 === (cloud ? pet.cloudSha256 : pet.sha256), 'Sprite hash differs from manifest');
 const width = png.readUInt32BE(16), height = png.readUInt32BE(20);
 check(width === 1536 && height === 2288 && pet.width === width && pet.height === height, 'Native v2 requires 1536 x 2288');
 check(png[24] === 8 && png[25] === 6 && png[28] === 0, 'Expected non-interlaced 8-bit RGBA PNG');
@@ -75,5 +76,5 @@ const report = {
   frames,
   scope: 'Native manifest, PNG structure, hash, grid, alpha bounds and all populated slots; visual review is separate.',
 };
-fs.writeFileSync(path.join(root, 'qa/dot-compatibility.json'), JSON.stringify(report, null, 2) + '\n');
+fs.writeFileSync(path.join(root, cloud ? 'qa/dot-cloud-validation.json' : 'qa/dot-compatibility.json'), JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify({ ...report, frames: undefined }, null, 2));

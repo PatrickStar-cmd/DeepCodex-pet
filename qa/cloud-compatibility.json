@@ -1,17 +1,45 @@
 {
   "format": "PNG v2",
+  "characterVersion": "3.2",
   "width": 1536,
   "height": 2288,
-  "sourceFrameIndices": [
-    0,
-    2,
-    3,
-    0,
-    69,
-    70
+  "idleAction": "seated-two-state-blink",
+  "states": [
+    "open",
+    "closed",
+    "open",
+    "open",
+    "open",
+    "open"
   ],
-  "amplitudeDegrees": 1.2940952255126037,
-  "nativeIdleSlots": 6,
-  "sha256": "ee998137cdd17898da78128db89697cfd159a56d742721849e5efefca948113b",
-  "reason": "Cloud Pets re-encoding removes embedded APNG animation; native animation must be represented by the six atlas slots."
+  "nativeDelaysMs": [
+    1680,
+    660,
+    660,
+    840,
+    840,
+    1920
+  ],
+  "durationMs": 6600,
+  "uniqueIdleFrames": 2,
+  "intermediateEyeStates": 0,
+  "amplitudeDegrees": 0,
+  "eyeRegions": [
+    {
+      "left": 54,
+      "top": 89,
+      "width": 32,
+      "height": 26
+    },
+    {
+      "left": 97,
+      "top": 89,
+      "width": 33,
+      "height": 26
+    }
+  ],
+  "changedPixelsOutsideEyes": 0,
+  "otherRowsUnchanged": true,
+  "sha256": "d177748e1e94fd4627fb529d4ff1aaa5aeff1d477be01b96665fdec5ac543c38",
+  "reason": "Cloud normalization removes embedded animation; repeat open/closed eyes in the six fixed slots without moving the head or body."
 }

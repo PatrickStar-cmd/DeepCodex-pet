@@ -6,7 +6,8 @@
     "build:v3": "node scripts/build-v3.mjs",
     "build:idle": "node scripts/build-idle-smooth.mjs",
     "build:cloud": "node scripts/build-cloud-compat.mjs",
-    "validate": "node scripts/validate-dot.mjs"
+    "validate": "node scripts/validate-dot.mjs",
+    "validate:cloud": "node scripts/validate-dot.mjs --cloud"
   },
   "devDependencies": {
     "sharp": "0.35.5",
