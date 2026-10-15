@@ -3,7 +3,7 @@
   "displayName": "大肥鱼",
   "spriteVersionNumber": 2,
   "spritesheetPath": "assets/spritesheet.png",
-  "description": "蓝发鲸鱼娘，陪伴阅读与思考的工作伙伴。",
+  "description": "v3 坐姿蓝发鲸鱼娘：待机左右晃脑袋，工作使用笔记本，悬停手指抵唇思考。",
   "sprite_version": 2,
   "spritesheet": "assets/spritesheet.png",
   "width": 1536,
@@ -12,54 +12,61 @@
   "cell_height": 208,
   "columns": 8,
   "rows": 11,
-  "sha256": "55c0a9da7cacfc64348daa455fd6481d5be80497dcfde77213dae4d9a07093b1",
+  "sha256": "f82c04987748d15880f6a56fefff44b3519a8fd5ce4f4d4383fa17f617d4e630",
   "states": [
     {
       "row": 0,
       "name": "idle",
       "frames": 6,
-      "visual_action": "sleepy-nod"
+      "visual_action": "seated-rhythmic-head-sway"
     },
     {
       "row": 1,
       "name": "running-right",
-      "frames": 8
+      "frames": 8,
+      "visual_action": "seated-moving-right"
     },
     {
       "row": 2,
       "name": "running-left",
-      "frames": 8
+      "frames": 8,
+      "visual_action": "seated-moving-left"
     },
     {
       "row": 3,
       "name": "waving",
-      "frames": 4
+      "frames": 4,
+      "visual_action": "seated-friendly-wave"
     },
     {
       "row": 4,
       "name": "jumping",
       "frames": 5,
-      "visual_action": "head-tilt"
+      "visual_action": "seated-finger-to-lips-curious"
     },
     {
       "row": 5,
       "name": "failed",
-      "frames": 8
+      "frames": 8,
+      "visual_action": "seated-small-disappointment"
     },
     {
       "row": 6,
       "name": "waiting",
-      "frames": 6
+      "frames": 6,
+      "visual_action": "seated-open-palms-waiting"
     },
     {
       "row": 7,
       "name": "running",
-      "frames": 6
+      "frames": 6,
+      "visual_action": "seated-laptop-typing"
     },
     {
       "row": 8,
       "name": "review",
-      "frames": 6
+      "frames": 6,
+      "visual_action": "seated-laptop-review"
     }
   ],
   "look": {
@@ -69,33 +76,42 @@
     ],
     "frames_per_row": 8,
     "angles_degrees": [
-      0.0,
+      0,
       22.5,
-      45.0,
+      45,
       67.5,
-      90.0,
+      90,
       112.5,
-      135.0,
+      135,
       157.5,
-      180.0,
+      180,
       202.5,
-      225.0,
+      225,
       247.5,
-      270.0,
+      270,
       292.5,
-      315.0,
+      315,
       337.5
     ],
     "angle_origin": "up",
     "angle_rotation": "clockwise"
   },
-  "active_work_action": "standing and typing on a laptop",
-  "asset_revision": "sleepy-idle-v5",
+  "active_work_action": "sitting and typing on a laptop",
+  "asset_revision": "seated-v3",
   "enhanced_actions": {
-    "waving": "friendly same-arm greeting with head tilt and warm smile",
-    "waiting": "open palms requesting input with blink and gentle tail movement",
-    "review": "inspecting the existing laptop with eye/head scan and confirming nod",
-    "jumping": "grounded inquisitive head tilt, blink, and return; replaces the original jump in its existing five-frame slot",
-    "idle": "shallow sleepy nod; eyes stay closed during the first recovery frame, gradually reopen in the second; six native frame slots"
+    "idle": "seated-rhythmic-head-sway",
+    "running-right": "seated-moving-right",
+    "running-left": "seated-moving-left",
+    "waving": "seated-friendly-wave",
+    "jumping": "seated-finger-to-lips-curious",
+    "failed": "seated-small-disappointment",
+    "waiting": "seated-open-palms-waiting",
+    "running": "seated-laptop-typing",
+    "review": "seated-laptop-review"
+  },
+  "product_version": "3.0",
+  "pointer_interaction": {
+    "button_hover": "jumping slot (row 4)",
+    "dot_idle_pointer": "16 seated finger-to-lips directional frames (rows 9 and 10)"
   }
 }

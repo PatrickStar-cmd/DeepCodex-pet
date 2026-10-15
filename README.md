@@ -1,104 +1,82 @@
-# 🐋 DeepCodex pet · 澜澜
+# 🐋 DeepCodex Pet · 大肥鱼 v3
 
-**一只在你工作时伴你左右的蓝发鲸鱼娘。💙**
+一只用于 Codex dot 的蓝发鲸鱼娘桌宠，原名澜澜。坐在任务栏上方，晃晃脑袋，陪你一起开工。💙
 
+![v3 坐姿、左右歪头、笔记本与思考表情](previews/seated-v3-stills.png)
 
-💻 开工时专心打字 · 👋 见面时微笑挥手 · 🤔 互动时轻轻歪头 · 🙌 等回应时摊开双手 · 🔎 复核时认真看屏幕
+**v3 · 2026-10-15 更新：** 全部动作统一为圆润的 Q 版坐姿，配色为靛蓝到青蓝的长发、蓝白女仆裙和小鲸尾，保持一致的头身比例。待机时轻轻左右歪头，工作时把笔记本放在腿上；鼠标互动时，露出手指抵唇、圆嘴、大眼睛和小问号的思考表情。
 
-![澜澜使用笔记本电脑](previews/laptop-work.gif)
-
-## 🎬 看看她的动作
-
-九种动作，十六个注视方向。待机时眼皮慢慢合上，困得轻轻点头，再抬头睁眼；互动时好奇歪头，挥手有微笑，等待有尾尖轻摆，检查有扫视屏幕和小小的点头。
-
-<table>
-  <tr><th>💻 抱电脑开工</th><th>👋 微笑打招呼</th><th>🙌 等你回应</th></tr>
-  <tr>
-    <td align="center"><img src="previews/laptop-work.gif" alt="抱着笔记本专心打字" width="192"></td>
-    <td align="center"><img src="previews/waving.gif" alt="微笑挥手，轻轻歪头" width="192"></td>
-    <td align="center"><img src="previews/waiting.gif" alt="摊掌等待回应，眨眼与尾尖轻摆" width="192"></td>
-  </tr>
-  <tr><th>🔎 认真复核</th><th>💤 困倦点头</th><th>🤔 好奇歪头</th></tr>
-  <tr>
-    <td align="center"><img src="previews/review.gif" alt="抱着笔记本扫视屏幕，轻点头" width="192"></td>
-    <td align="center"><img src="previews/sleepy-nod.gif" alt="渐渐闭眼、困倦点头、缓慢抬头睁眼" width="192"></td>
-    <td align="center"><img src="previews/head-tilt.gif" alt="好奇地歪头、眨眼、回正，双脚保持落地" width="192"></td>
-  </tr>
-  <tr><th>🐾 向左走</th><th>🐾 向右走</th><th>🥺 遇到小挫折</th></tr>
-  <tr>
-    <td align="center"><img src="previews/running-left.gif" alt="向左移动" width="192"></td>
-    <td align="center"><img src="previews/running-right.gif" alt="向右移动" width="192"></td>
-    <td align="center"><img src="previews/failed.gif" alt="任务失败时的表情反馈" width="192"></td>
-  </tr>
-  <tr><th>👀 十六向注视</th><th>🌊 待机 → 歪头 → 待机</th><th>🎞️ 完整动作巡览</th></tr>
-  <tr>
-    <td align="center"><img src="previews/look-loop.gif" alt="顺时针十六个注视方向" width="192"></td>
-    <td align="center"><img src="previews/idle-head-tilt-idle.gif" alt="待机到歪头再回到待机的连续动作" width="192"></td>
-    <td align="center"><img src="previews/all-states.gif" alt="全部九种动作连续展示" width="192"></td>
-  </tr>
-</table>
-
-📽️ [完整动作 MP4](previews/all-states.mp4) · 🖼️ [困倦点头四姿态](previews/four-stills.png) · 🧭 [注视方向图](previews/direction-sheet.png)
-
-## 📦 把澜澜带到桌面
-
-### Codex dot · 大肥鱼
-
-在仓库根目录运行 `./scripts/install-dot.ps1`，将桌宠安装到本机 Codex。进入 Pets 设置选择 **大肥鱼**，再把 dot 形象设为桌宠 / Pet。配置已适配本机 v2 加载格式，保留原有全部动作与十六向注视。
-
-[dot 适配与安装说明](docs/dot-adaptation.md) · [小尺寸 / 深浅背景互动预览](previews/dot-compatibility.html)
-
-### Pets 导入
-
-1. 下载 [透明精灵图](assets/spritesheet.png) 和 [角色配置](pet.json)。
-2. 在支持 v2 格式的 Pets 导入流程中使用精灵图，选择澜澜。
-3. 让她陪你开工！动作会随 Codex 的状态切换，工作时她会抱着笔记本打字。🐋
-
-## 🗂️ 素材百宝箱
-
-| 目录 / 文件 | 内容 |
-|---|---|
-| [assets/spritesheet.png](assets/spritesheet.png) | 当前完整透明精灵图 |
-| [pet.json](pet.json) | 角色信息、动作帧数、注视方向与文件哈希 |
-| [previews/](previews/) | 动作 GIF、MP4 和图示 |
-| [source/](source/) | 基础形象、生成动作条、57 张透明动作帧及注视素材 |
-| [prompts/](prompts/) | 图像生成提示词与动作修正记录 |
-| [docs/github-animation-study.md](docs/github-animation-study.md) | GitHub 鲸鱼娘项目研究与动作整合记录 |
-| [qa/](qa/) | 结构、逐帧、方向及独立视觉检查记录 |
-
-<details>
-<summary>🛠️ 精灵图规格与动作槽位</summary>
-
-v2 透明 PNG，**1536 × 2288** 像素，**8 列 × 11 行**；每个单元格 **192 × 208** 像素。行号从 0 开始，各行动作帧从左向右排列。
-
-| 行 | 状态 | 帧数 |
+| 🌊 坐姿晃脑袋 | 💻 笔记本工作 | 🤔 抵唇思考 |
 |---|---|---|
-| 0 | `idle` · 困倦点头 | 6 |
-| 1 | `running-right` · 向右移动 | 8 |
-| 2 | `running-left` · 向左移动 | 8 |
-| 3 | `waving` · 微笑挥手 | 4 |
-| 4 | `jumping` 槽位 · 好奇歪头 | 5 |
-| 5 | `failed` · 挫折反馈 | 8 |
-| 6 | `waiting` · 摊掌等待回应 | 6 |
-| 7 | `running` · 笔记本工作 | 6 |
-| 8 | `review` · 笔记本复核 | 6 |
-| 9 | 注视 0° 至 157.5° | 8 |
-| 10 | 注视 180° 至 337.5° | 8 |
+| ![左右歪头待机](previews/seated-idle-v3.gif) | ![坐姿使用笔记本](previews/laptop-work.gif) | ![手指抵唇思考](previews/hover-thinking-v3.gif) |
+| 👋 微笑挥手 | 🙌 等待回应 | 🥺 小小失落 |
+| ![坐姿挥手](previews/waving.gif) | ![坐姿摊掌等待](previews/waiting.gif) | ![坐姿挫折反馈](previews/failed.gif) |
 
-注视方向以向上为 0°，顺时针每 22.5° 一帧。当前版本将原有五帧 `jumping` 槽位替换为歪头动画，客户端调用这个槽位时会显示歪头。工作、移动、挥手、等待、复核及十六向注视保持原样，沿用 Codex Pets 的触发规则。
+[任务栏互动预览](previews/v3.html) · [深浅背景与小尺寸检查](previews/dot-compatibility.html) · [动作切换 GIF](previews/v3-transition.gif) · [完整动作巡览](previews/all-states.gif)
 
-[歪头更新记录](docs/head-tilt-update.md) · [六帧动作对比](previews/head-tilt-stills.png)
+GitHub 首页可直接查看 GIF；互动 HTML 预览需下载仓库后在本地打开。小尺寸检查页建议通过本地 HTTP 服务访问。
 
-待机动画采用轻浅点头，抬头先保持闭眼，再慢慢睁眼；六帧按客户端实际速度预览，一轮 6.6 秒。详见 [困倦点头更新](docs/sleepy-idle-update.md) 和 [逐帧对比](previews/sleepy-nod-stills.png)。工作画面提前回到待机的客户端规则见 [循环核查](docs/work-animation-loop.md)。
+## 安装到本机 Codex（Windows）
 
-角色与动作由 ImageGen 生成，再完成分帧、透明提取、边缘清理、网格组装和视觉复核。当前文件哈希见 `pet.json`，详细制作证据见 `qa/`。
+下载仓库后运行安装脚本，安装预制素材无需安装 Node.js 或构建依赖：
 
-</details>
+```powershell
+git clone https://github.com/PatrickStar-cmd/DeepCodex-pet.git
+cd DeepCodex-pet
+./scripts/install-dot.ps1
+```
 
-## 💙 灵感与感谢
+已经克隆仓库的用户，更新后在仓库根目录重新运行 `./scripts/install-dot.ps1` 即可。
 
-澜澜参考 DeepSeek 鲸鱼娘的蓝白配色、鲸鱼元素与女仆形象，以 Q 版动漫贴纸风格重新生成。
+安装名称为 **大肥鱼**，稳定 ID 为 `custom:deepcodex-lanlan`。更新时自动备份旧素材，已选择该角色时沿用原 ID。若界面仍显示旧素材，重新进入 Pets 设置选择大肥鱼，必要时重新打开客户端。
 
-感谢鲸鱼娘桌宠社区带来的动作灵感！本项目研究了五个 GitHub 项目的互动表情、状态语义和动作节奏，整合记录与固定版本见 [动作研究](docs/github-animation-study.md)。
+首次使用：在 Codex Pets 设置选择大肥鱼，再将 dot 形象设为桌宠 / Pet。任务栏位置由 Codex 的 dot 布局控制；本仓库负责角色坐姿和动作素材。
 
-🐋 [DSH WhaleConsole 角色说明](https://github.com/Georgehaoren/DSH-WhaleConsole/blob/main/docs/CHARACTERS.zh-CN.md) · 🎨 [形象参考](https://raw.githubusercontent.com/tokenhunter475/awesome-chatgpt-plus-guide/main/assets/articles/2026-09-20-deepseek-pet/deepseek-base.png) · 📰 [相关报道](https://tech.ifeng.com/c/8vic079nhxf)
+当前客户端的桌宠按钮悬停会播放思考动作；dot 待机时跟随鼠标使用同款思考表情的十六向素材。dot 工作时保持笔记本动作，鼠标注视目前仅在待机时启用。详见 [v3 更新与兼容说明](docs/seated-v3-update.md)。
+
+## 素材与构建
+
+| 路径 | 内容 |
+|---|---|
+| [assets/spritesheet.png](assets/spritesheet.png) | 当前原生完整精灵图 |
+| [assets/spritesheet-v3.png](assets/spritesheet-v3.png) | v3 同内容版本副本 |
+| [pet.json](pet.json) | 角色配置、动作槽位和 SHA-256 |
+| [source/v3/](source/v3/) | ImageGen 原始透明输出和坐姿锚点 |
+| [source/frames/](source/frames/) | 当前 57 张动作帧和 16 张注视帧 |
+| [prompts/v3/](prompts/v3/) | 生成与修正提示词 |
+| [qa/v3-registration.json](qa/v3-registration.json) | 统一缩放和坐姿基线记录 |
+| [source/revisions/pre-seated-v3/](source/revisions/pre-seated-v3/) | 更新前配置和精灵图备份 |
+
+```powershell
+npm install
+npm run build:v3
+npm run validate
+```
+
+v3 是角色素材版本；原生文件继续使用客户端支持的 **sprite v2** 格式：1536 × 2288 RGBA PNG，8 列 × 11 行，每格 192 × 208。有效槽位 73 个，空白槽位 15 个。构建按每套生成图使用一个统一缩放比例，并将坐姿落点统一到单元格 y=203。
+
+| 行（从 0 开始） | 状态 | 帧数 | v3 动作 |
+|---|---|---|---|
+| 0 | `idle` | 6 | 坐姿左右晃脑袋 |
+| 1 / 2 | `running-right` / `running-left` | 各 8 | 坐姿移动时的头部动作 |
+| 3 | `waving` | 4 | 坐姿微笑挥手 |
+| 4 | `jumping` 槽位 | 5 | 手指抵唇的思考表情 |
+| 5 | `failed` | 8 | 小小失落后恢复微笑 |
+| 6 | `waiting` | 6 | 坐姿摊掌等待 |
+| 7 | `running` | 6 | 坐姿笔记本打字 |
+| 8 | `review` | 6 | 笔记本注视、轻点头和眨眼 |
+| 9 / 10 | 鼠标注视 | 16 | 思考表情，顺时针十六向注视 |
+
+动画速度沿用客户端：待机一轮 6.6 秒，工作一轮 0.82 秒。GIF 和互动预览使用对应时长。角色画面由内置 ImageGen 生成，再分帧、清理透明噪点、对齐和打包。
+
+## 验证状态
+
+当前 v3 已通过精灵图格式、哈希、73 个有效槽位与透明边缘检查；互动预览已检查九种状态、悬停与离开恢复、持续工作循环、减少动态效果及任务栏坐姿基线。记录见 [素材检查](qa/dot-compatibility.json) 和 [预览检查](qa/v3-preview.json)。真实 Codex 界面的完整交互仍待复现，客户端行为依据本机版本核查结果。
+
+## 灵感与历史记录
+
+澜澜参考 DeepSeek 鲸鱼娘的蓝白配色、鲸鱼元素与女仆形象，以 Q 版动漫风格重新生成；v3 思考表情参考用户提供的坐姿图片。
+
+[dot 适配历史](docs/dot-adaptation.md) · [原困倦待机](docs/sleepy-idle-update.md) · [原歪头动作](docs/head-tilt-update.md) · [社区动作研究](docs/github-animation-study.md)
+
+历史说明中的站姿、困倦点头与旧截图属于 v3 前版本，当前素材以本页和 v3 更新记录为准。

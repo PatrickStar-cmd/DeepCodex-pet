@@ -1,0 +1,53 @@
+{
+  "valid": true,
+  "states": [
+    {
+      "state": "idle",
+      "row": 0
+    },
+    {
+      "state": "running-right",
+      "row": 1
+    },
+    {
+      "state": "running-left",
+      "row": 2
+    },
+    {
+      "state": "waving",
+      "row": 3
+    },
+    {
+      "state": "jumping",
+      "row": 4
+    },
+    {
+      "state": "failed",
+      "row": 5
+    },
+    {
+      "state": "waiting",
+      "row": 6
+    },
+    {
+      "state": "running",
+      "row": 7
+    },
+    {
+      "state": "review",
+      "row": 8
+    }
+  ],
+  "hoverRow": 4,
+  "pointerLeaveRow": 0,
+  "workAfter3500ms": 7,
+  "reducedMotionHeldFirstFrame": true,
+  "contact": {
+    "spriteSeatBaseline": 598.796875,
+    "taskbarTop": 598.796875,
+    "gap": 0
+  },
+  "mobileOverflow": false,
+  "errors": [],
+  "scope": "Headless Edge preview-page checks; does not claim live Codex UI verification."
+}

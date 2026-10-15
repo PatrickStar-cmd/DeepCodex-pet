@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>大肥鱼 · dot 适配预览</title>
+<title>大肥鱼 v3 · dot 适配预览</title>
 <style>
   * { box-sizing: border-box; }
   body { margin: 0; padding: 32px; font: 15px/1.6 system-ui, sans-serif; background: #eef3fa; color: #17253b; }
@@ -24,13 +24,13 @@
   #status { font-size: 13px; }
 </style>
 <main>
-  <h1>大肥鱼 <small>· dot 适配预览</small></h1>
-  <p>沿用鲸鱼娘全身形象，按本机 Codex dot 的内容边界、缩放、像素采样及动作节奏预览。</p>
+  <h1>大肥鱼 v3 <small>· dot 适配预览</small></h1>
+  <p>坐姿鲸鱼娘，按本机 Codex dot 的内容边界、缩放、像素采样及动作节奏预览。<a href="v3.html">查看任务栏互动预览</a>。</p>
   <div class="controls">
     <label>动作 <select id="state">
-      <option value="idle">困倦待机</option><option value="running">笔记本工作</option>
+      <option value="idle">坐姿晃脑袋</option><option value="running">笔记本工作</option>
       <option value="review">认真复核</option><option value="waiting">等待回应</option>
-      <option value="waving">微笑挥手</option><option value="jumping">好奇歪头</option>
+      <option value="waving">微笑挥手</option><option value="jumping">抵唇思考</option>
       <option value="failed">挫折反馈</option><option value="running-left">向左移动</option><option value="running-right">向右移动</option>
     </select></label>
     <label><input id="reduced" type="checkbox"> 减少动态效果（首帧）</label>
@@ -41,7 +41,7 @@
   <section class="panel dark"><h2>深色背景</h2><div class="samples"></div></section>
   <section class="panel"><h2>十六向注视 · 48 px</h2><div class="directions"></div></section>
   <p class="note">16 / 20 / 32 px 为客户端小图标尺寸；64 / 96 px 用于细节检查。小图标保留蓝白轮廓，完整表情建议在较大的 dot 或桌宠视图观察。本页为素材预览，不代表已在应用中切换当前 dot。</p>
-  <p class="note">dot 使用持续循环；悬停桌宠按钮则调用第 4 行歪头。减少动态效果时保持该状态首帧。</p>
+  <p class="note">dot 使用持续循环；悬停桌宠按钮调用第 4 行思考表情，dot 待机鼠标注视使用第 9、10 行的同款思考表情。减少动态效果时保持该状态首帧。</p>
 </main>
 <script>
   const counts = [6,8,8,4,5,8,6,6,6];

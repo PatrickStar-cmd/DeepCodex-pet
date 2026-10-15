@@ -1,0 +1,9 @@
+Use case: identity-preserve
+Asset type: transparent companion animation sheet for v3 seated desktop pet.
+The reference is the EXACT approved character. Preserve identity, round large chibi head occupying half of seated height, indigo upper hair with bright cyan tips, white maid headdress, blue bow on viewer RIGHT, navy/white/gold dress, forward-facing shoe soles, right-side whale tail. Every pose is SITTING on her bottom with the same planted skirt/shoes and same body scale.
+Layout exactly THREE columns x FOUR rows, twelve equal 512x512 square cells, total1536x2048, no labels or divider lines, one complete isolated seated character per cell. All cells have same size and same floor-contact baseline.
+Cells 1–4 (read row major, 3 per row): four successive FRIENDLY WAVE poses. Right hand of character (viewer LEFT) raised beside cheek, fingers relaxed, alternating palm angle, warm small smile, eyes open in1, open in2, smiling blink in3, open in4. Other hand rests on lap. No mirroring.
+Cells5–8: four successive WAITING FOR INPUT poses. Both little hands open palms gently upward at waist, sweet expectant expression, slight brow lift, mouth tiny friendly open smile, soft blink in7, tiny tail tip wiggle. Same seated posture.
+Cells9–12: four successive SMALL DISAPPOINTMENT poses. Hands resting on lap or lightly held together, brows slope up toward center, small pout, eyes slightly watery but no huge tears, in10 eyes gently closed, in11 looking back up, in12 a reassuring tiny smile. Cute gentle feedback, no distressed screaming.
+Keep anatomy tidy, consistent hand count, no extra limbs, exact same hairstyle/outfit across all12. Do not move bow to opposite side. Crisp dark indigo linework, consistent polished anime cel shading, same cobalt/navy/cyan palette as reference.
+Background ACTUAL ALPHA TRANSPARENT, no scenery, no floor plane/shadow, no text, no chair/platform, no stickers/border, no symbols, no question marks.

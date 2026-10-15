@@ -1,0 +1,12 @@
+{
+  "name": "deepcodex-pet",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:v3": "node scripts/build-v3.mjs",
+    "validate": "node scripts/validate-dot.mjs"
+  },
+  "devDependencies": {
+    "sharp": "0.35.5"
+  }
+}

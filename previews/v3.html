@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>大肥鱼 v3 · 坐在身边</title>
+  <style>
+    * { box-sizing: border-box; }
+    :root { font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif; color: #213257; background: #f2f6ff; }
+    body { margin: 0; padding: 42px 24px; }
+    main { max-width: 1060px; margin: auto; }
+    .eyebrow { color: #426ad5; font-size: 12px; letter-spacing: .12em; font-weight: 700; }
+    h1 { margin: 10px 0; font-size: clamp(28px, 4vw, 42px); letter-spacing: -.04em; }
+    .intro { margin: 0 0 24px; color: #637596; line-height: 1.8; }
+    .toolbar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 20px 0; }
+    button, select { font: inherit; font-size: 14px; border: 1px solid #c7d5f2; border-radius: 10px; padding: 9px 15px; color: #294875; background: white; cursor: pointer; }
+    button:focus-visible, select:focus-visible { outline: 3px solid #75baff; outline-offset: 4px; }
+    label { font-size: 13px; color: #637596; }
+    .desktop { height: 400px; border-radius: 24px; overflow: hidden; position: relative; border: 1px solid #c7d5f2; background: radial-gradient(ellipse at 40% 70%, #dcecff, transparent 70%), linear-gradient(140deg, #edf4ff, #e4e7fa); }
+    .desktop.dark { background: radial-gradient(ellipse at 40% 70%, #233562, transparent 70%), linear-gradient(140deg, #0b1428, #152039); border-color: #354a70; }
+    .desktop-hint { position: absolute; left: 28px; top: 23px; color: #6b7b9d; font-size: 13px; }
+    .dark .desktop-hint { color: #97aacc; }
+    .taskbar { position: absolute; bottom: 0; height: 48px; width: 100%; border-top: 1px solid #b7c7e7; background: #f9fbffba; display: flex; align-items: center; justify-content: center; gap: 14px; backdrop-filter: blur(12px); }
+    .dark .taskbar { background: #17223bd9; border-color: #4a5e85; }
+    .taskbar span { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 6px; background: #5e87e4; color: #fff; font-size: 15px; }
+    .taskbar span:nth-child(2) { background: #8a70ca; } .taskbar span:nth-child(3) { background: #399fc7; }
+    #pet { position: absolute; left: calc(50% - 96px); bottom: 43px; padding: 0; width: 192px; height: 208px; border: 0; border-radius: 14px; background: transparent; }
+    .sprite { width: 192px; height: 208px; background: url('../assets/spritesheet-v3.png') no-repeat; background-size: 1536px 2288px; pointer-events: none; }
+    .status { min-height: 24px; font-size: 13px; color: #637596; margin: 12px 0 26px; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    article { padding: 22px; border: 1px solid #d6e0f3; border-radius: 18px; background: #ffffffc7; }
+    article h2 { margin: 0 0 8px; font-size: 16px; }
+    article p { color: #637596; font-size: 13px; line-height: 1.7; margin: 0; }
+    article img { display: block; width: min(100%, 192px); margin: 8px auto 16px; }
+    footer { font-size: 12px; line-height: 1.9; color: #7d8caa; margin-top: 28px; }
+    @media(max-width: 650px) { body { padding: 25px 16px; } .cards { grid-template-columns: 1fr; } .desktop { height: 350px; } }
+    @media(prefers-reduced-motion: reduce) { .cards { display: none; } }
+  </style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">大肥鱼 · V3</div>
+  <h1>坐在身边，陪你慢慢完成。</h1>
+  <p class="intro">左右晃晃脑袋，抱着笔记本开工。鼠标移到她身上，看看她在想什么。</p>
+  <div class="toolbar">
+    <select id="state" aria-label="动作状态">
+      <option value="idle">坐姿待机</option><option value="running">笔记本工作</option>
+      <option value="review">认真复核</option><option value="waving">微笑挥手</option>
+      <option value="waiting">等待回应</option><option value="failed">小小失落</option>
+      <option value="jumping">好奇思考</option><option value="running-left">向左移动</option>
+      <option value="running-right">向右移动</option>
+    </select>
+    <button id="theme">切换深色背景</button>
+    <button id="pause">暂停动作</button>
+    <label><input id="reduced" type="checkbox"> 减少动态效果</label>
+  </div>
+  <div class="desktop" id="desktop">
+    <div class="desktop-hint">把鼠标移到待机的大肥鱼上，或用 Tab 选中她</div>
+    <button id="pet" aria-label="大肥鱼，坐姿桌宠"><div class="sprite" id="sprite"></div></button>
+    <div class="taskbar" aria-hidden="true"><span>⊞</span><span>▤</span><span>✦</span></div>
+  </div>
+  <p class="status" id="status" aria-live="polite">正在加载…</p>
+  <div class="cards">
+    <article><h2>轻轻晃脑袋</h2><img src="seated-idle-v3.gif" alt="坐姿左右歪头待机动画"><p>坐得稳稳的，脑袋往左、回正、再往右，最后眨眨眼。</p></article>
+    <article><h2>一起开工</h2><img src="laptop-work.gif" alt="坐着使用笔记本工作动画"><p>小笔记本放在腿上，专心打字，偶尔眨眼。</p></article>
+    <article><h2>让我想一想</h2><img src="hover-thinking-v3.gif" alt="手指抵唇、圆嘴和问号的思考表情"><p>手指抵唇、睁大眼睛，再配一个小小的问号。</p></article>
+  </div>
+  <footer>本页模拟任务栏上方的坐姿与素材动作。真实桌宠的位置和状态切换由 Codex 控制；当前 dot 在待机时响应鼠标注视，桌宠按钮悬停会播放思考动作。</footer>
+</main>
+<script>
+  const names = ['idle','running-right','running-left','waving','jumping','failed','waiting','running','review'];
+  const counts = [6,8,8,4,5,8,6,6,6];
+  const delays = [[1680,660,660,840,840,1920],[120,120,120,120,120,120,120,220],[120,120,120,120,120,120,120,220],[140,140,140,280],[140,140,140,140,280],[140,140,140,140,140,140,140,240],[150,150,150,150,150,260],[120,120,120,120,120,220],[150,150,150,150,150,280]];
+  const labels = ['坐姿晃脑袋','向右移动','向左移动','微笑挥手','好奇思考','小小失落','等待回应','笔记本工作','认真复核'];
+  const select = document.querySelector('#state'), sprite = document.querySelector('#sprite');
+  const pet = document.querySelector('#pet'), reduced = document.querySelector('#reduced');
+  let timer, column = 0, paused = false, hovering = false, focused = false, ready = false;
+  function current() { return (hovering || focused) && select.value === 'idle' ? 4 : names.indexOf(select.value); }
+  function draw() {
+    const row = current();
+    sprite.style.backgroundPosition = `${-column*192}px ${-row*208}px`;
+    sprite.dataset.row = row; sprite.dataset.frame = column;
+    document.querySelector('#status').textContent = `${labels[row]}${paused?' · 已暂停':reduced.checked?' · 静止首帧':' · 循环播放'}`;
+    if (paused || reduced.checked) return;
+    timer = setTimeout(() => { column = (column + 1) % counts[row]; draw(); }, delays[row][column]);
+  }
+  function restart() { clearTimeout(timer); column = 0; if (ready) draw(); }
+  select.onchange = restart;
+  pet.onpointerenter = () => { hovering = true; restart(); };
+  pet.onpointerleave = () => { hovering = false; restart(); };
+  pet.onfocus = () => { focused = true; restart(); };
+  pet.onblur = () => { focused = false; restart(); };
+  reduced.checked = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  reduced.onchange = restart;
+  document.querySelector('#pause').onclick = e => { paused = !paused; e.target.textContent = paused?'继续动作':'暂停动作'; restart(); };
+  document.querySelector('#theme').onclick = e => { const dark = document.querySelector('#desktop').classList.toggle('dark'); e.target.textContent = dark?'切换浅色背景':'切换深色背景'; };
+  const image = new Image();
+  image.onload = () => { ready = true; restart(); };
+  image.onerror = () => { document.querySelector('#status').textContent = '素材加载失败'; };
+  image.src = '../assets/spritesheet-v3.png';
+</script>
+</body>
+</html>
