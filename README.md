@@ -1,6 +1,6 @@
 # 🐋 DeepCodex Pet · 大肥鱼 v3.2
 
-适用于 Codex dot 的蓝发鲸鱼娘桌宠（澜澜）。v3 采用 Q 版坐姿，统一了各动作的头身比例与坐姿基线。
+适用于 Codex dot 的大肥鱼桌宠（澜澜）。v3 采用 Q 版坐姿，统一了各动作的头身比例与坐姿基线。
 
 ![v3 坐姿与动作一览](previews/seated-v3-stills.png)
 
@@ -113,6 +113,6 @@ npm run validate:cloud # 校验云端图集
 
 ## 设定来源与历史
 
-澜澜参考 DeepSeek 鲸鱼娘的蓝白配色、鲸鱼元素与女仆设定，以 Q 版动漫风格制作。v3 思考动作参考了用户提供的坐姿图片。
+澜澜参考 DeepSeek 鲸鱼娘的蓝白配色、鲸鱼元素与女仆设定，以 Q 版动漫风格制作。
 
 [v3 更新说明](docs/seated-v3-update.md) · [dot 适配历史](docs/dot-adaptation.md) · [早期困倦待机](docs/sleepy-idle-update.md) · [早期歪头动作](docs/head-tilt-update.md) · [社区动作研究](docs/github-animation-study.md)
