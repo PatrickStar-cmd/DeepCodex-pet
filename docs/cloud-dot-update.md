@@ -1,36 +1,40 @@
-# 云端 Pets / dot 替换说明
+# 云端 Pets 更新
 
-适用对象：已经迁移到云端 Pets、显示在 dot 形象中的“大肥鱼”。核查日期：2026-10-15。
+云端使用 [spritesheet-cloud.png](../assets/spritesheet-cloud.png)。v3.2 保留坐姿、笔记本工作和思考互动，将待机改为睁眼 / 闭眼两态眨眼，头部和身体保持固定。
 
-## 使用哪一份素材
+## 原生 dot 的播放节奏
 
-使用 `assets/spritesheet-cloud.png`。这份素材保留 v3 坐姿、配色、头身比例、笔记本工作和抵唇思考表情。v3.2 待机改为睁眼 / 闭眼两态眨眼，头部和身体固定，不添加中间态。
+云端服务将 APNG、动态 WebP 重编码为静态 PNG，动作通过图集中的原生槽位播放。客户端 `26.1007.9446.0` 于 2026-10-15 记录的待机时长如下：
 
-本地 `assets/spritesheet.png` 包含 72 帧 APNG 连续动画，适用于保留原始 PNG 字节的本地加载方式。云端 Pets 上传后会重新编码 PNG，移除 APNG 动画块。如果直接上传它，六个默认待机槽位的相同姿态会使云端待机看起来静止。因此云端使用独立兼容图集：六槽位按睁眼、闭眼、睁眼、睁眼、睁眼、睁眼排列，沿用客户端时长。
+| 槽位（从 0 开始） | 眼睛状态 | 时长（ms） |
+|---|---|---:|
+| 0 | 睁眼 | 1680 |
+| 1 | 闭眼 | 660 |
+| 2 | 睁眼 | 660 |
+| 3 | 睁眼 | 840 |
+| 4 | 睁眼 | 840 |
+| 5 | 睁眼 | 1920 |
 
-## 原生 dot 的流畅度限制
+一轮共 6600 ms，其中闭眼 660 ms。六个槽位重复两种眼睛状态，眼部区域以外的头部、身体和其他动作行保持原有像素。
 
-2026-10-15 在客户端 `26.1007.9446.0` 进一步验证：待机六帧的停留时间依次为 1680、660、660、840、840、1920 ms，一轮 6.6 秒。v3.1 小幅晃头仍然存在跳变；v3.2 改为两态眨眼，闭眼使用最短的 660 ms 槽位，其余时间保持睁眼。此改动避免晃头跳姿态，不能增加客户端帧率或缩短闭眼时间。
+本地连续晃头的 72 帧动画见[APNG 说明](idle-smooth-update.md)。格式回读记录见 [webp-cloud-test.json](../qa/idle-smooth/webp-cloud-test.json)，编码工具见 [probe-animated-webp.mjs](../scripts/probe-animated-webp.mjs)。
 
-另用同一套 72 帧素材制作了动态 WebP。本地浏览器连续播放正常，20 次采样出现 18 个不同画面；上传到云端后，下载回读却得到仅含 IHDR / IDAT / IEND 的静态 PNG，动画帧数为 0。APNG 和动态 WebP 两条路径均未保留云端连续动画，兼容版仍受原生六帧节奏限制。验证记录见 [`qa/idle-smooth/webp-cloud-test.json`](../qa/idle-smooth/webp-cloud-test.json)，本地编码探针为 [`scripts/probe-animated-webp.mjs`](../scripts/probe-animated-webp.mjs)。
+## 更新已有角色
 
-格式测试结束后曾恢复 v3.1 轻摆素材，随后按新的待机要求更新为 v3.2 眨眼素材；两次均回读验证解码像素并确认原角色激活。继续保留原生 dot，暂不制作独立桌宠。以上结论对应此次服务回读及客户端版本；后续客户端或服务改变播放方式时需重新验证。
+在支持 Pets 工具的环境中执行：
 
-## 替换已有角色
+1. 在 Pets 列表确认目标“大肥鱼”的稳定 ID，以及自定义角色标记 `is_custom: true`。
+2. 下载原图备份，对最终的 `assets/spritesheet-cloud.png` 运行 `validate_pet_spritesheet`。
+3. 运行 `prepare_pet_upload`，将返回的 `upload_session_id` 交给 `update_pet`，更新原角色图集。
+4. 使用 `select_pet` 激活同一 ID，并从列表确认激活状态。
+5. 下载更新后的图集，对比解码像素及待机状态。
+6. 按[头像快照流程](dot-avatar-snapshot.md#保存与刷新)保存 dot 资料卡头像。
 
-1. 在 Pets 列表中确定原有“大肥鱼”的稳定 ID，并确认它是可更新的自定义角色。重名时先区分目标。
-2. 下载旧素材作备份，预检最终的 `assets/spritesheet-cloud.png`。
-3. 使用 Pets 上传会话更新同一角色的精灵图，保留原 ID、名称及描述。
-4. 激活更新后的同一条目。
-5. 回读角色列表，确认该 ID 仍存在且为激活状态。
-6. 下载存储后的素材，核对解码像素、六个待机槽位的姿态变化及其余动作行。
-7. 在 dot 的形象编辑中重新选择桌宠“大肥鱼”并保存，刷新独立头像快照；返回资料卡确认坐姿。仅完成前六步不能证明资料卡换图成功，详见[头像快照说明](dot-avatar-snapshot.md)。
+更新沿用原 ID、名称和描述。云端编码会改变文件 SHA-256，回读检查采用解码后的像素数据。
 
-服务重新编码会改变文件 SHA-256，因此回读校验以解码像素是否一致为依据。v3.2 兼容图集的云端存储像素与上传原图完全一致，六个待机槽位只有睁眼和闭眼两种状态；眼部区域以外及其余动作行的像素保持不变。
+本地安装记录使用 `custom:deepcodex-lanlan`，云端角色 ID 由账号分配。本地文件更新见[安装说明](dot-adaptation.md#安装与启用)，云端图集通过上述 Pets 流程更新。
 
-原生本地 ID 和迁移后的云端 ID 属于不同的记录。`scripts/install-dot.ps1` 负责替换本地目录中的素材；已经迁移的云端记录需要通过以上 Pets 更新流程替换。云端 ID 由账号分配，不应将某个账号的 ID 写死到项目安装脚本。
-
-## 构建和预览
+## 构建与安装
 
 ```powershell
 npm install
@@ -38,9 +42,15 @@ npm run build:cloud
 npm run validate:cloud
 ```
 
-- 素材：`assets/spritesheet-cloud.png`。
-- 预览：`previews/idle-cloud-compatible.gif`。
-- 可复现的帧选择与文件哈希：`qa/cloud-compatibility.json`。
-- 本地连续晃头及静态选项：[v3.1 待机说明](idle-smooth-update.md)。
+在本地使用同一套眨眼素材：
 
-云端兼容版使用两态眨眼，无法达到本地版的 24 fps。上述回读验证覆盖图集数据与 Pets 选择配置；资料卡头像快照另行保存和验证。
+```powershell
+./scripts/install-dot.ps1 -CloudIdle
+```
+
+| 文件 | 内容 |
+|---|---|
+| [idle-cloud-compatible.gif](../previews/idle-cloud-compatible.gif) | 按原生时长播放的眨眼预览 |
+| [cloud-blink-stills.png](../previews/cloud-blink-stills.png) | 睁眼、闭眼和恢复坐姿 |
+| [cloud-compatibility.json](../qa/cloud-compatibility.json) | 眼部合成区域、槽位顺序与文件哈希 |
+| [cloud-blink-preflight.json](../qa/cloud-blink-preflight.json) | 上传预检与回读记录 |

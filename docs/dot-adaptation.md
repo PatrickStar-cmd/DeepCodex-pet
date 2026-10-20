@@ -1,17 +1,27 @@
-# 大肥鱼 · Codex dot 适配
+# 原生适配与本地安装
 
-核查日期：2026-10-14。本机 Codex 版本：`26.1007.9446.0`。
+大肥鱼的原生加载配置位于 [pet.json](../pet.json)。本页集中记录配置字段、图集规格和安装步骤。
 
-## 本次调整
+## 配置与规格
 
-- dot 显示名称为 **大肥鱼**；角色原名仍为澜澜。
-- 根目录 `pet.json` 增加原生加载字段 `displayName`、`spriteVersionNumber: 2`、`spritesheetPath`。原来的 `name`、`sprite_version`、`spritesheet` 保留给项目素材记录使用。
-- 精灵图继续使用原有透明 v2 PNG，1536 × 2288、8 列 × 11 行、192 × 208 单元格，全部 73 个有效单元格与 15 个空白单元格通过检查。图像像素未改变。
-- 提供本地安装脚本和按客户端规则显示的小尺寸、深浅背景、减少动态效果、十六向注视预览。
+| 字段 | 项目值 | 用途 |
+|---|---|---|
+| `displayName` | `大肥鱼` | 客户端显示名称 |
+| `spriteVersionNumber` | `2` | 原生精灵图格式 |
+| `spritesheetPath` | `assets/spritesheet.png` | 相对宠物目录的素材路径 |
 
-本机加载器从 `$CODEX_HOME/pets/<目录>/pet.json` 读取原生字段。省略 `spriteVersionNumber` 会默认使用 v1，并要求 1536 × 1872；原配置只有 `sprite_version`，无法指定原生 v2。省略 `spritesheetPath` 又会查找默认 `spritesheet.webp`，与仓库 PNG 路径不同。这两处配置导致直接复制旧项目配置无法加载。
+`name`、`sprite_version`、`spritesheet` 用于项目素材记录。原生加载器的默认值为 v1 格式和 `spritesheet.webp`；项目通过上述字段指定 v2 PNG。
 
-## 安装与选择
+| 参数 | 数值 |
+|---|---|
+| 图像 | `1536 × 2288`、8 位 RGBA PNG |
+| 网格 | 8 列 × 11 行，每格 `192 × 208` |
+| 槽位 | 57 个标准动作帧、16 个注视帧、15 个透明空白格 |
+| 当前待机首帧边界 | `(left=13, top=18, width=165, height=185)` |
+
+客户端根据待机首帧的 alpha 内容边界定位各状态。构建时统一缩放与基线，各状态共用这套定位规则。边界记录见 [dot-compatibility.json](../qa/dot-compatibility.json)。
+
+## 安装与启用
 
 在仓库根目录运行：
 
@@ -19,34 +29,37 @@
 ./scripts/install-dot.ps1
 ```
 
-默认安装到 `$CODEX_HOME/pets/deepcodex-lanlan`；未设置 `CODEX_HOME` 时使用用户目录下 `.codex`。可通过 `-CodexHome` 指定其他本地 Codex 目录。安装包仅包含原生配置和精灵图；重复安装会保留目录 ID，并备份原配置和已有精灵图。
+| 参数 | 用途 |
+|---|---|
+| `-StaticIdle` | 安装静态待机素材 |
+| `-CloudIdle` | 安装两态眨眼素材 |
+| `-CodexHome <目录>` | 指定本地 Codex 数据目录 |
 
-在 Codex 的 Pets 设置中选择 **大肥鱼**，然后在 dot 的形象选项中选择桌宠 / Pet。原生 ID 为 `custom:deepcodex-lanlan`，名称变化不会创建不同 ID。本次安装只把素材加入本地列表，未更改当前选择或 dot 配置。若列表未刷新，重新进入 Pets 设置。
+默认安装目录为 `$CODEX_HOME/pets/deepcodex-lanlan`。`CODEX_HOME` 留空时，使用用户目录下的 `.codex`。重复安装沿用稳定 ID `custom:deepcodex-lanlan`，旧配置和图集保存在宠物目录的 `backups/` 中。
 
-## dot 的显示与动作
+安装后，在 Pets 设置选择“大肥鱼”，再在 dot 的形象选项中选择桌宠 / Pet。已迁移到云端的角色使用[云端更新流程](cloud-dot-update.md)，资料卡头像按[快照流程](dot-avatar-snapshot.md)保存。
 
-客户端从待机第 0 帧的非透明像素求内容边界，并使用相同边界定位各状态；当前边界为 `(34, 4, 125, 198)`。因此不对每张动作独立裁剪或放大，避免切换时头部、脚底和电脑抖动。保持完整蓝发、耳鳍、鲸尾、女仆裙及笔记本轮廓。
+## 客户端播放参数
 
-dot 渲染路径显式使用 `loop: true`：工作第 7 行的一轮为 820 ms；dot 的状态持续为工作时循环播放。待机六帧一轮为 6600 ms。减少动态效果或不播放动画的视图使用相应状态首帧。
+以下参数记录于 2026-10-14，客户端版本为 `26.1007.9446.0`。
 
-原桌宠按钮悬停使用第 4 行，仍然显示当前的好奇歪头。dot 的十六向注视继续使用第 9、10 行，以向上为 0°、顺时针每 22.5° 一帧。
+| 场景 | 播放方式 |
+|---|---|
+| dot 工作状态 | 第 7 行，6 帧、一轮 820 ms，`loop: true` |
+| 原生待机槽位 | 第 0 行，6 帧、一轮 6600 ms |
+| 桌宠按钮悬停 | 第 4 行 `jumping` 槽位；v3 使用抵唇思考动作 |
+| 待机鼠标注视 | 第 9、10 行共 16 帧，向上为 0°，顺时针每 22.5° 一帧 |
+| 减少动态效果 | 客户端显示相应状态首帧；静态素材使用 `-StaticIdle` 安装 |
 
-dot 小图标使用 16 / 20 / 32 px，全身形象在这些尺寸主要呈现蓝白轮廓，细小的脸部表情需要较大的视图。预览同时提供 64 / 96 px 检查头饰、尾巴和电脑，未将头像 PNG 当作精灵图替代品。
+本地 APNG 的连续动画见[待机说明](idle-smooth-update.md)，云端两态眨眼的时长见[播放节奏](cloud-dot-update.md#原生-dot-的播放节奏)。
 
-旧版[工作动画循环核查](work-animation-loop.md)描述的是桌宠按钮的有限播放路径，不能用于判断当前 dot 的持续循环行为。
-
-## 验证与范围
+## 检查与预览
 
 ```powershell
-node scripts/validate-dot.mjs
+npm run validate
+npm run validate:cloud
 ```
 
-检查结果写入 `qa/dot-compatibility.json`，包括原生配置、SHA-256、PNG 解码、全部动作和注视槽位、空白格和透明边界。打开 `previews/dot-compatibility.html` 可查看小尺寸的原生比例预览；需要允许本地文件读取相邻图片，也可以通过本地 HTTP 服务打开。
+[适配预览页](../previews/dot-compatibility.html)提供深浅背景以及 16 / 20 / 32 / 64 / 96 px 尺寸。小尺寸用于查看整体轮廓，64 / 96 px 用于查看表情和道具。
 
-使用独立的无头 Edge 检查预览页：九种动作均定位到对应行；推进 3500 ms 后工作仍在第 7 行循环；减少动态效果开启后推进 10000 ms，仍保持工作首帧。浏览器未报告脚本错误，记录见 `qa/dot-preview.json`。这验证的是预览页，应用内规则另由下述只读代码核查确认。
-
-已检查[待机尺寸对比](../previews/dot-compatibility.png)和[工作尺寸对比](../previews/dot-working.png)：浅、深色背景下轮廓完整，较大尺寸的头饰、尾巴和笔记本可辨；16 / 20 px 仅能辨认小幅蓝白轮廓，不声称这些尺寸能清楚展示表情。
-
-本次依据本机安装包的加载器和渲染代码核查，而非公开文档中的兼容承诺；后续客户端更新可能改变行为。相关代码为 `src-DCNiwad_.js` 的本地 pet 加载器、`app-initial-102e45562729.js` 的 `Hdo` / `Opo` / `Mpo` / `Yco`，以及 `mini-orbit-artwork-27ef4f4560c0.js` 的小图标渲染。仅只读检查安装包，没有修改客户端。
-
-素材和本地安装已验证；尚未在真实 dot 界面切换并复现交互，预览不能替代这一步。
+参数记录：[图集结构](../qa/dot-compatibility.json) · [预览记录](../qa/dot-preview.json) · [待机尺寸图](../previews/dot-compatibility.png) · [工作尺寸图](../previews/dot-working.png)。加载与渲染实现记录对应安装包中的 `src-DCNiwad_.js` 和 `app-initial-102e45562729.js`。

@@ -28,7 +28,7 @@ GIF 可在 GitHub 直接查看。互动 HTML 预览请克隆仓库后在本地�
 
 ![云端两态眨眼预览](previews/idle-cloud-compatible.gif)
 
-机制说明：[本地连续动画](docs/idle-smooth-update.md) · [云端播放节奏](docs/cloud-dot-update.md#原生-dot-的流畅度限制) · [更新记录](CHANGELOG.md)
+机制说明：[本地连续动画](docs/idle-smooth-update.md) · [云端播放节奏](docs/cloud-dot-update.md#原生-dot-的播放节奏) · [更新记录](CHANGELOG.md)
 
 ## 安装与更新
 
